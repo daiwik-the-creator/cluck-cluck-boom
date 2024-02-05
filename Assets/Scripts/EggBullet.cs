@@ -28,9 +28,5 @@ public class EggBullet : MonoBehaviour
        
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }
