@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    bool IsGrounded()
+    public bool IsGrounded()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, myRb.transform.localScale.y + 0.1f, groundLayer);
 

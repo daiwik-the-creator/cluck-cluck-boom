@@ -14,7 +14,7 @@ public class eggShooter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -22,9 +22,11 @@ public class eggShooter : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            if(!player.IsGrounded()) {
+                // spawn the egg only when player is in air. 
+                Instantiate(egg, shootingPoint.position, transform.rotation);
+            }
             
-            // spawn the egg
-            Instantiate(egg, shootingPoint.position, transform.rotation);
            
         }
 
