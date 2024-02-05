@@ -1113,6 +1113,37 @@ Transform:
   - {fileID: 996099669}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1336946361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336946362}
+  m_Layer: 0
+  m_Name: shootingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1336946362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336946361}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.99, y: 0.44, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1633162908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1633162903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,6 +1159,7 @@ GameObject:
   - component: {fileID: 1633162904}
   - component: {fileID: 1633162909}
   - component: {fileID: 1633162910}
+  - component: {fileID: 1633162911}
   m_Layer: 0
   m_Name: Beakley
   m_TagString: Untagged
@@ -1189,7 +1221,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.1333334, y: 2.1333334}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 2.1333334, y: 2.1333334}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1270,7 +1302,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.1333334, y: 2.1333334}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1290,6 +1322,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1005893190}
+  - {fileID: 1336946362}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1633162909
@@ -1342,6 +1375,20 @@ CircleCollider2D:
   m_Offset: {x: -0.082013026, y: -0.23432262}
   serializedVersion: 2
   m_Radius: 0.84406054
+--- !u!114 &1633162911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633162903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f465a07e061a53e41a956d61ab0bed8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  egg: {fileID: 7849251500302573809, guid: 78ec48b4524e8054e9f12340caa164b8, type: 3}
+  shootingPoint: {fileID: 1336946362}
 --- !u!1 &1708602406
 GameObject:
   m_ObjectHideFlags: 0
