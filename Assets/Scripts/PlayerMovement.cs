@@ -23,7 +23,22 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         myRb.MovePosition(myRb.position + movement * playerSpeed * Time.deltaTime);
 
+<<<<<<< Updated upstream
         if (Input.GetButtonDown("Jump"))
+=======
+    }
+
+    public bool IsGrounded()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, myRb.transform.localScale.y + 0.1f, groundLayer);
+
+        return hit.collider != null;
+    }
+
+    private void Flip()
+    {
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+>>>>>>> Stashed changes
         {
             myRb.AddForce(jump, ForceMode2D.Impulse);
         }
