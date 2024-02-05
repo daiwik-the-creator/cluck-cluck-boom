@@ -390,8 +390,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &658140140
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +958,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3047075, y: 1.793698}
   m_EdgeRadius: 0
->>>>>>> Stashed changes
 --- !u!1 &1633162903
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,18 +971,12 @@ GameObject:
   - component: {fileID: 1633162906}
   - component: {fileID: 1633162905}
   - component: {fileID: 1633162904}
-<<<<<<< Updated upstream
-  m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
-=======
   - component: {fileID: 1633162909}
   - component: {fileID: 1633162910}
   - component: {fileID: 1633162911}
   m_Layer: 0
   m_Name: Beakley
   m_TagString: Player
->>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1137,10 +1128,6 @@ Transform:
   m_GameObject: {fileID: 1633162903}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< Updated upstream
-  m_LocalPosition: {x: -8.38, y: -2.98, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-=======
   m_LocalPosition: {x: -1.9, y: 0.48, z: 0}
   m_LocalScale: {x: 0.7072, y: 0.7072, z: 0.7072}
   m_ConstrainProportionsScale: 0
@@ -1407,7 +1394,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.46514025, y: -1.0123689, z: -0.018029101}
   m_LocalScale: {x: 6.023318, y: 0.74762875, z: 1}
->>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1895113778}
@@ -1451,11 +1437,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 423618712}
-<<<<<<< Updated upstream
-  - {fileID: 419412563}
-  - {fileID: 1633162908}
-=======
   - {fileID: 1633162908}
   - {fileID: 1213131063}
   - {fileID: 1895113778}
->>>>>>> Stashed changes
