@@ -30,11 +30,11 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if ((Input.GetKeyDown(KeyCode.UpArrow)) && IsGrounded())
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             myRb.velocity = new Vector2(myRb.velocity.x, jumpForce);
         } 
-        else if ((Input.GetKeyDown(KeyCode.UpArrow)) && canJump)
+        else if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             myRb.velocity = new Vector2(myRb.velocity.x, 16f);
             canJump = false;
