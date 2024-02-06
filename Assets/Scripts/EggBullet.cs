@@ -11,11 +11,11 @@ public class EggBullet : MonoBehaviour
     {
         
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        // get mouse position and translate it to 2D world position
+
+        // get mouse position and translate it to 2D world position, borrowed from unity tutorial-1 (290)
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
         Vector2 shootDirection = mousePos2D - new Vector2(transform.position.x, transform.position.y);
-
         rb.velocity = shootDirection * bulletSpeed;
     }
 
