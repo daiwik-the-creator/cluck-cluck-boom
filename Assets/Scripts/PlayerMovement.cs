@@ -63,11 +63,12 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         myRb.velocity = new Vector2(horizontal * playerSpeed, myRb.velocity.y);
-
+        
     }
 
     public bool IsGrounded()
     {
+        // Raycasting example taken from GAME 290 -Unity Tutorial #1
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, myRb.transform.localScale.y + 0.1f, groundLayer);
 
         return hit.collider != null;

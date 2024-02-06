@@ -24,6 +24,7 @@ public class Breakable : MonoBehaviour
     {
         if (isShaking)
         {
+            // Object shake in a small position https://forum.unity.com/threads/random-insideunitcirclea-around-a-certain-position.160257/
             transform.position = startPos + UnityEngine.Random.insideUnitCircle * shakeAmount;
         }
     }
@@ -35,6 +36,7 @@ public class Breakable : MonoBehaviour
             //damage
             isShaking = true;
             hit += 1;
+            
             Invoke("StopShaking", shakeTime);
 
         }
