@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,9 +14,11 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRight = true;
     private bool canJump = false;
 
+    [SerializeField] private GameObject camObj;
+    [SerializeField] private float camFlipSpeed;
     [SerializeField] private Rigidbody2D myRb;
-    [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+
     
 
 
@@ -45,8 +48,6 @@ public class PlayerMovement : MonoBehaviour
             canJump = true;
         }
 
-        Flip();
-
         if (Input.GetKeyDown(KeyCode.R))
         {
             ResetScene();
@@ -63,7 +64,8 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         myRb.velocity = new Vector2(horizontal * playerSpeed, myRb.velocity.y);
-        
+        Flip();
+        CineCam();
     }
 
     public bool IsGrounded()
@@ -81,8 +83,38 @@ public class PlayerMovement : MonoBehaviour
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= - 1f;
+
+            // Accessing the Transposer https://stackoverflow.com/questions/68615384/how-to-access-the-tracked-object-offset-in-the-body-of-cinemachinevirtualcamera
+
+            
+
             transform.localScale = localScale;
         }
+    }
+
+    private void CineCam()
+    {
+        CinemachineFramingTransposer transposer = camObj.GetComponentInChildren<CinemachineFramingTransposer>();
+        
+        if (isFacingRight && transposer.m_TrackedObjectOffset.x <= 1)
+        {
+            transposer.m_TrackedObjectOffset.x += camFlipSpeed;
+
+        }
+        else if (!isFacingRight && transposer.m_TrackedObjectOffset.x >= -1f)
+        {
+            transposer.m_TrackedObjectOffset.x += -(camFlipSpeed);
+        }
+
+        if (IsGrounded() && transposer.m_YDamping <= 2)
+        {
+            transposer.m_YDamping += 1f;
+        }
+        else if (!IsGrounded() && transposer.m_YDamping >= .5)
+        {
+            transposer.m_YDamping -= 0.1f;
+        }
+
     }
 
 }
