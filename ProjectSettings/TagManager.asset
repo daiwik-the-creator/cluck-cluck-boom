@@ -8,6 +8,7 @@ TagManager:
   - Breakable
   - Room
   - Obstacle
+  - Egg
   layers:
   - Default
   - TransparentFX
