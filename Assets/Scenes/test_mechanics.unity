@@ -3635,7 +3635,7 @@ GameObject:
   - component: {fileID: 1005893191}
   m_Layer: 0
   m_Name: PeckHitbox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5003,7 +5003,7 @@ GameObject:
   - component: {fileID: 1336946362}
   m_Layer: 0
   m_Name: shootingPoint
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

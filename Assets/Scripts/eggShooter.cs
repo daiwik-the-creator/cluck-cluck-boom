@@ -26,12 +26,7 @@ public class eggShooter : MonoBehaviour
                 // spawn the egg only when player is in air. 
                 Instantiate(egg, shootingPoint.position, transform.rotation);
             }
-            
-           
+                       
         }
-
-    }
-
-    
-
+   }    
 }
