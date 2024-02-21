@@ -53,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
             ResetScene();
         }
 
+
+
     }
 
     private void ResetScene()
@@ -63,6 +65,18 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        CinemachineVirtualCamera[] virtualCameras = FindObjectsOfType<CinemachineVirtualCamera>();
+
+        // Deactivate all virtual cameras except the current one
+        foreach (CinemachineVirtualCamera cam in virtualCameras)
+        {
+            if (cam.gameObject != camObj)
+            {
+                camObj = cam.gameObject;
+            }
+        }
+
         myRb.velocity = new Vector2(horizontal * playerSpeed, myRb.velocity.y);
         Flip();
         CineCam();
