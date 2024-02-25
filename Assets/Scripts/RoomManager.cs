@@ -1,34 +1,40 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
-using UnityEditor;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
-    private GameObject prevCam;
-    private GameObject currCam;
-    bool OverRide = false;
-
+    List<GameObject> Rooms = new List<GameObject>();
+    private GameObject currRoom;
+    
+        
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Room"))
-        {
-            if (currCam == null)
+        { 
+
+            if (currRoom == null)
             {
-                currCam = other.transform.GetChild(0).transform.gameObject;
-                currCam.SetActive(true);
-            } else
+                
+                currRoom = other.transform.GetChild(0).transform.gameObject;
+                AddRoom(currRoom);
+                currRoom.SetActive(true);
+
+            }
+            else
             {
-                if (currCam != other.transform.GetChild(0).transform.gameObject && currCam.GetComponent<CinemachineVirtualCamera>().Priority < other.transform.GetChild(0).GetComponent<CinemachineVirtualCamera>().Priority)
+                AddRoom(other.transform.GetChild(0).transform.gameObject);
+                if (currRoom != other.transform.GetChild(0).transform.gameObject && IsGreater(other.transform.GetChild(0).transform.gameObject, currRoom))
                 {
-                    currCam.SetActive(false);
-                    prevCam = currCam;
-                    currCam = other.transform.GetChild(0).transform.gameObject;
-                    currCam.SetActive(true);
+                    currRoom.SetActive(false);
+                    currRoom = other.transform.GetChild(0).transform.gameObject;
+                    currRoom.SetActive(true);
+
                 }
+
             }
             
         }
@@ -37,37 +43,75 @@ public class RoomManager : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Room") && OverRide == false)
+        if (other.CompareTag("Room")) 
         {
-            GameObject temp = currCam;
+          
+            if (Rooms.Contains(other.transform.GetChild(0).transform.gameObject))
+            {
+                Debug.Log(Rooms.Count);
+                other.transform.GetChild(0).transform.gameObject.SetActive(false);
+                RemoveRoom(other.transform.GetChild(0).transform.gameObject);
+                if (Rooms.Count >= 1)
+                {
+                    int temp = -1;
+                    int prio = -1;
+                    for (int i = 0; i < Rooms.Count; i++)
+                    {
+                        if (Rooms[i].GetComponent<CinemachineVirtualCamera>().Priority > prio)
+                        {
+                            prio = Rooms[i].GetComponent<CinemachineVirtualCamera>().Priority;
+                            temp = i;
+                        }
+                    }
 
-            
-            currCam.SetActive(false);
-            prevCam.SetActive(true); 
-            
-            currCam = prevCam;
-            prevCam = temp;
+                    
+                    Rooms[temp].SetActive(true);
+                    currRoom = Rooms[temp];
+                }
+                Debug.Log("exit2");
+                
+            } else
+            {
+                Debug.Log("exit!");
+            }
         }
     }
 
-    /*private void OnTriggerStay2D(Collider2D other)
-    {
-        int p1 = 0;
-        int p2 = 0;
 
-        if (other.CompareTag("Room"))
+    private void AddRoom(GameObject room)
+    {
+        if (!Rooms.Contains(room))
         {
-            p2 = p1;
-            p1 = other.transform.GetChild(0).GetComponent<CinemachineVirtualCamera>().Priority;
-            if (p1 != p2)
-            {
-                OverRide = true;
-            } else
-            {
-                OverRide = false;
-            }
+            Rooms.Add(room);
+        }
+    }
+
+    private void RemoveRoom(GameObject room)
+    {
+        if (Rooms.Contains(room))
+        {
+            Rooms.Remove(room);
+        }
+    }
+
+    
+    public bool IsGreater(GameObject x, GameObject y)
+    {
+        if (x.GetComponent<CinemachineVirtualCamera>().Priority > y.GetComponent<CinemachineVirtualCamera>().Priority)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public void FixedUpdate()
+    {
+        if (Rooms.Count!=0)
+        {
+            Debug.Log(Rooms[Rooms.Count-1].name);
         }
             
-    }*/
+    }
 
 }
