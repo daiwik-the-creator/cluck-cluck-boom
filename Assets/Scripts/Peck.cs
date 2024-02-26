@@ -47,9 +47,11 @@ public class Peck : MonoBehaviour
             Rigidbody2D otherRb = collision.GetComponent<Rigidbody2D>();
             if (otherRb != null)
             {
+                otherRb.isKinematic = false;
                 
                 Vector2 peckDirection = myRb.transform.localScale.x > 0 ? Vector2.right : Vector2.left;
                 otherRb.AddForce(peckDirection * peckForce, ForceMode2D.Impulse);
+               
             }
         }
         
