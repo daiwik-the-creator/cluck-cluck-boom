@@ -48,7 +48,6 @@ public class RoomManager : MonoBehaviour
           
             if (Rooms.Contains(other.transform.GetChild(0).transform.gameObject))
             {
-                Debug.Log(Rooms.Count);
                 other.transform.GetChild(0).transform.gameObject.SetActive(false);
                 RemoveRoom(other.transform.GetChild(0).transform.gameObject);
                 if (Rooms.Count >= 1)
@@ -67,12 +66,7 @@ public class RoomManager : MonoBehaviour
                     
                     Rooms[temp].SetActive(true);
                     currRoom = Rooms[temp];
-                }
-                Debug.Log("exit2");
-                
-            } else
-            {
-                Debug.Log("exit!");
+                }         
             }
         }
     }
@@ -103,15 +97,6 @@ public class RoomManager : MonoBehaviour
         }
 
         return false;
-    }
-
-    public void FixedUpdate()
-    {
-        if (Rooms.Count!=0)
-        {
-            Debug.Log(Rooms[Rooms.Count-1].name);
-        }
-            
     }
 
 }

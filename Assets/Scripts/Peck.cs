@@ -43,16 +43,16 @@ public class Peck : MonoBehaviour
         Debug.Log(collision.tag);
         if (collision.tag == "Peckable")
         {
-   
+
             Rigidbody2D otherRb = collision.GetComponent<Rigidbody2D>();
             if (otherRb != null)
             {
-                
+
                 Vector2 peckDirection = myRb.transform.localScale.x > 0 ? Vector2.right : Vector2.left;
                 otherRb.AddForce(peckDirection * peckForce, ForceMode2D.Impulse);
             }
         }
-        
+
     }
 
 private void ResetPeck()

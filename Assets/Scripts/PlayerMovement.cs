@@ -48,12 +48,19 @@ public class PlayerMovement : MonoBehaviour
             canJump = true;
         }
 
+        // Glide
+        if (Input.GetKey(KeyCode.Space) && !IsGrounded() && myRb.velocity.y < 0f)
+        {
+            myRb.gravityScale = 0.5f;
+        } else
+        {
+            myRb.gravityScale = 4f;
+        }
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             ResetScene();
         }
-
-
 
     }
 
@@ -65,18 +72,6 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        CinemachineVirtualCamera[] virtualCameras = FindObjectsOfType<CinemachineVirtualCamera>();
-
-        // Deactivate all virtual cameras except the current one
-        foreach (CinemachineVirtualCamera cam in virtualCameras)
-        {
-            if (cam.gameObject != camObj)
-            {
-                camObj = cam.gameObject;
-            }
-        }
-
         myRb.velocity = new Vector2(horizontal * playerSpeed, myRb.velocity.y);
         Flip();
         CineCam();
@@ -98,18 +93,16 @@ public class PlayerMovement : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= - 1f;
 
-            // Accessing the Transposer https://stackoverflow.com/questions/68615384/how-to-access-the-tracked-object-offset-in-the-body-of-cinemachinevirtualcamera
-
-            
-
             transform.localScale = localScale;
         }
     }
 
     private void CineCam()
     {
+        // Accessing the Transposer https://stackoverflow.com/questions/68615384/how-to-access-the-tracked-object-offset-in-the-body-of-cinemachinevirtualcamera
         CinemachineFramingTransposer transposer = camObj.GetComponentInChildren<CinemachineFramingTransposer>();
         
+        // Flipping Camera based on faced direction.
         if (isFacingRight && transposer.m_TrackedObjectOffset.x <= 1)
         {
             transposer.m_TrackedObjectOffset.x += camFlipSpeed;
@@ -120,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
             transposer.m_TrackedObjectOffset.x += -(camFlipSpeed);
         }
 
+        // Falling Y-axis camera movement.
         if (IsGrounded() && transposer.m_YDamping <= 2)
         {
             transposer.m_YDamping += 1f;
