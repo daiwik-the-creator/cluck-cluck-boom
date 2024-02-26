@@ -11,12 +11,7 @@ public class Peck : MonoBehaviour
 
     [SerializeField] private Rigidbody2D myRb;
     [SerializeField] private float peckForce;
-    [SerializeField] private GameObject peckHitBox;
-    // Start is called before the first frame update
-    void Start()
-    {
-        peckHitBox.SetActive(false);
-    }
+    [SerializeField] private LayerMask peckable;
 
     // Update is called once per frame
     void Update()
@@ -31,30 +26,21 @@ public class Peck : MonoBehaviour
 
     IEnumerator DoPeck()
     {
-        peckHitBox.SetActive(true);
-        yield return new WaitForSeconds(.2f);
-        peckHitBox.SetActive(false);
-        ResetPeck();
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log(collision.tag);
-        if (collision.tag == "Peckable")
-        {
-   
-            Rigidbody2D otherRb = collision.GetComponent<Rigidbody2D>();
-            if (otherRb != null)
+        Vector2 peckDirection = myRb.transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, peckDirection, 99, peckable);
+        
+        if (hit && (hit.collider.GetComponent<Rigidbody2D>().position.x - myRb.position.x) <= 1.75f) {
+            if (hit.collider.CompareTag("Peckable"))
             {
-                otherRb.isKinematic = false;
-                
-                Vector2 peckDirection = myRb.transform.localScale.x > 0 ? Vector2.right : Vector2.left;
-                otherRb.AddForce(peckDirection * peckForce, ForceMode2D.Impulse);
-               
+                hit.rigidbody.AddForce(peckDirection * peckForce, ForceMode2D.Impulse);
+            } else if (hit.collider.CompareTag("Breakable"))
+            {
+                hit.collider.GetComponent<Breakable>().Hit();
             }
         }
         
+        yield return new WaitForSeconds(.2f);
+        ResetPeck();
     }
 
 private void ResetPeck()

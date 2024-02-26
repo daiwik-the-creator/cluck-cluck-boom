@@ -10,7 +10,7 @@ public class Breakable : MonoBehaviour
     float shakeTime = .25f;
     Vector2 startPos;
 
-    int hit = 0;
+    public int hit = 0;
     [SerializeField] private int hitThreshold;
 
     // Start is called before the first frame update
@@ -29,17 +29,13 @@ public class Breakable : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void Hit()
     {
-        if (collision.gameObject.name == "PeckHitbox")
-        {
-            //damage
-            isShaking = true;
-            hit += 1;
-            
-            Invoke("StopShaking", shakeTime);
+        //damage
+        isShaking = true;
+        hit += 1;
 
-        }
+        Invoke("StopShaking", shakeTime);
     }
 
     void StopShaking()
@@ -48,7 +44,7 @@ public class Breakable : MonoBehaviour
         transform.position = startPos;
         if (hit >= hitThreshold)
         {
-            Object.Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 

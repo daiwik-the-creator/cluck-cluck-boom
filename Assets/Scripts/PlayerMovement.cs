@@ -20,8 +20,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
 
     
-
-
     private void Start()
     {
         // get the player's rigidbody
@@ -32,16 +30,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+        myRb.velocity = new Vector2(horizontal * playerSpeed, myRb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
-        {
-            myRb.velocity = new Vector2(myRb.velocity.x, jumpForce);
-        } 
-        else if (Input.GetKeyDown(KeyCode.Space) && canJump)
-        {
-            myRb.velocity = new Vector2(myRb.velocity.x, 16f);
-            canJump = false;
-        }
+        Jump();
+        Flip();
+        CineCam();
 
         if (IsGrounded())
         {
@@ -52,34 +45,12 @@ public class PlayerMovement : MonoBehaviour
         {
             ResetScene();
         }
-
-
-
     }
 
     private void ResetScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
-    }
-
-    void FixedUpdate()
-    {
-
-        CinemachineVirtualCamera[] virtualCameras = FindObjectsOfType<CinemachineVirtualCamera>();
-
-        // Deactivate all virtual cameras except the current one
-        foreach (CinemachineVirtualCamera cam in virtualCameras)
-        {
-            if (cam.gameObject != camObj)
-            {
-                camObj = cam.gameObject;
-            }
-        }
-
-        myRb.velocity = new Vector2(horizontal * playerSpeed, myRb.velocity.y);
-        Flip();
-        CineCam();
     }
 
     public bool IsGrounded()
@@ -90,6 +61,30 @@ public class PlayerMovement : MonoBehaviour
         return hit.collider != null;
     }
 
+    private void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        {
+            myRb.velocity = new Vector2(myRb.velocity.x, jumpForce);
+        }
+        // Double Jump
+        else if (Input.GetKeyDown(KeyCode.Space) && canJump)
+        {
+            myRb.velocity = new Vector2(myRb.velocity.x, 16f);
+            canJump = false;
+        }
+
+        // Glide
+        if (Input.GetKey(KeyCode.Space) && !IsGrounded() && myRb.velocity.y < 0f)
+        {
+            myRb.gravityScale = 0.5f;
+        }
+        else
+        {
+            myRb.gravityScale = 4f;
+        }
+    }
+
     private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
@@ -98,18 +93,16 @@ public class PlayerMovement : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= - 1f;
 
-            // Accessing the Transposer https://stackoverflow.com/questions/68615384/how-to-access-the-tracked-object-offset-in-the-body-of-cinemachinevirtualcamera
-
-            
-
             transform.localScale = localScale;
         }
     }
 
     private void CineCam()
     {
+        // Accessing the Transposer https://stackoverflow.com/questions/68615384/how-to-access-the-tracked-object-offset-in-the-body-of-cinemachinevirtualcamera
         CinemachineFramingTransposer transposer = camObj.GetComponentInChildren<CinemachineFramingTransposer>();
         
+        // Flipping Camera based on faced direction.
         if (isFacingRight && transposer.m_TrackedObjectOffset.x <= 1)
         {
             transposer.m_TrackedObjectOffset.x += camFlipSpeed;
@@ -120,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
             transposer.m_TrackedObjectOffset.x += -(camFlipSpeed);
         }
 
+        // Falling Y-axis camera movement.
         if (IsGrounded() && transposer.m_YDamping <= 2)
         {
             transposer.m_YDamping += 1f;
