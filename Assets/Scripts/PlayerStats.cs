@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -30,7 +31,13 @@ public class PlayerStats : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("ded");
-            gameObject.transform.Rotate(0, 0, -90);
+            ResetScene();
         }
+    }
+
+    private void ResetScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
