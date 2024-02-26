@@ -3747,7 +3747,7 @@ GameObject:
   - component: {fileID: 996099674}
   - component: {fileID: 996099673}
   - component: {fileID: 996099675}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Office_chair
   m_TagString: Peckable
   m_Icon: {fileID: 0}
@@ -3763,7 +3763,7 @@ Transform:
   m_GameObject: {fileID: 996099668}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.24, y: -0.53, z: -0.0607}
+  m_LocalPosition: {x: -11.2, y: -0.53, z: -0.0607}
   m_LocalScale: {x: 1.1163, y: 1.1163, z: 1.1163}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3958,83 +3958,6 @@ PolygonCollider2D:
       - {x: 0.25, y: -0.8833334}
       - {x: 0.48333335, y: -0.8833334}
   m_UseDelaunayMesh: 0
---- !u!1 &1005893189
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1005893190}
-  - component: {fileID: 1005893191}
-  m_Layer: 0
-  m_Name: PeckHitbox
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1005893190
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005893189}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1633162908}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1005893191
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005893189}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.0723252, y: -0.1715821}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7257265, y: 0.7789242}
-  m_EdgeRadius: 0
 --- !u!1 &1014278790
 GameObject:
   m_ObjectHideFlags: 0
@@ -6449,7 +6372,7 @@ Transform:
   m_GameObject: {fileID: 1588768182}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.824219, y: -11.507142, z: -6.6364408}
+  m_LocalPosition: {x: -8.824219, y: -11.4964285, z: -6.6364408}
   m_LocalScale: {x: 1.34, y: 0.93, z: 0.9576709}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6668,12 +6591,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633162903}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.51, y: -3.31, z: 0}
   m_LocalScale: {x: 0.7072, y: 0.7072, z: 0.7072}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1005893190}
   - {fileID: 1336946362}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6691,7 +6613,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRb: {fileID: 1633162906}
   peckForce: 100
-  peckHitBox: {fileID: 1005893189}
+  peckable:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!58 &1633162910
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7253,7 +7177,7 @@ Transform:
   m_GameObject: {fileID: 1728673685}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.824219, y: -9.196429, z: -6.6364408}
+  m_LocalPosition: {x: -8.824219, y: -9.185715, z: -6.6364408}
   m_LocalScale: {x: 1.3399999, y: 0.92999995, z: 0.95766884}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8094,7 +8018,7 @@ GameObject:
   - component: {fileID: 2024535021}
   - component: {fileID: 2024535020}
   - component: {fileID: 2024535019}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Spoon
   m_TagString: Breakable
   m_Icon: {fileID: 0}
@@ -8202,6 +8126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85466ade935e96d43bc027ebd5194958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hit: 0
   hitThreshold: 2
 --- !u!212 &2024535022
 SpriteRenderer:

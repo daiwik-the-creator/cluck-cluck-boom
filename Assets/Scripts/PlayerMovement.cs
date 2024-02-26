@@ -20,8 +20,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
 
     
-
-
     private void Start()
     {
         // get the player's rigidbody
@@ -32,36 +30,21 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+        myRb.velocity = new Vector2(horizontal * playerSpeed, myRb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
-        {
-            myRb.velocity = new Vector2(myRb.velocity.x, jumpForce);
-        } 
-        else if (Input.GetKeyDown(KeyCode.Space) && canJump)
-        {
-            myRb.velocity = new Vector2(myRb.velocity.x, 16f);
-            canJump = false;
-        }
+        Jump();
+        Flip();
+        CineCam();
 
         if (IsGrounded())
         {
             canJump = true;
         }
 
-        // Glide
-        if (Input.GetKey(KeyCode.Space) && !IsGrounded() && myRb.velocity.y < 0f)
-        {
-            myRb.gravityScale = 0.5f;
-        } else
-        {
-            myRb.gravityScale = 4f;
-        }
-
         if (Input.GetKeyDown(KeyCode.R))
         {
             ResetScene();
         }
-
     }
 
     private void ResetScene()
@@ -70,19 +53,36 @@ public class PlayerMovement : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex);
     }
 
-    void FixedUpdate()
-    {
-        myRb.velocity = new Vector2(horizontal * playerSpeed, myRb.velocity.y);
-        Flip();
-        CineCam();
-    }
-
     public bool IsGrounded()
     {
         // Raycasting example taken from GAME 290 -Unity Tutorial #1
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, myRb.transform.localScale.y + 0.1f, groundLayer);
 
         return hit.collider != null;
+    }
+
+    private void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        {
+            myRb.velocity = new Vector2(myRb.velocity.x, jumpForce);
+        }
+        // Double Jump
+        else if (Input.GetKeyDown(KeyCode.Space) && canJump)
+        {
+            myRb.velocity = new Vector2(myRb.velocity.x, 16f);
+            canJump = false;
+        }
+
+        // Glide
+        if (Input.GetKey(KeyCode.Space) && !IsGrounded() && myRb.velocity.y < 0f)
+        {
+            myRb.gravityScale = 0.5f;
+        }
+        else
+        {
+            myRb.gravityScale = 4f;
+        }
     }
 
     private void Flip()
