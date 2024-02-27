@@ -9,11 +9,11 @@ public class PlayerMovement : MonoBehaviour
 {
 
     private float horizontal;
-    private float playerSpeed = 8f;
-    private float jumpForce = 16f;
     private bool isFacingRight = true;
     private bool canJump = false;
 
+    [SerializeField] private float playerSpeed = 8f;
+    [SerializeField] private float jumpForce = 16f;
     [SerializeField] private GameObject camObj;
     [SerializeField] private float camFlipSpeed;
     [SerializeField] private Rigidbody2D myRb;
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
         Jump();
         Flip();
-        CineCam();
+        //CineCam();
 
         if (IsGrounded())
         {
@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void CineCam()
+   /* private void CineCam()
     {
         // Accessing the Transposer https://stackoverflow.com/questions/68615384/how-to-access-the-tracked-object-offset-in-the-body-of-cinemachinevirtualcamera
         CinemachineFramingTransposer transposer = camObj.GetComponentInChildren<CinemachineFramingTransposer>();
@@ -123,6 +123,6 @@ public class PlayerMovement : MonoBehaviour
             transposer.m_YDamping -= 0.1f;
         }
 
-    }
+    }*/
 
 }
