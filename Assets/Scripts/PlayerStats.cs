@@ -8,8 +8,8 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField] int startHealth;
     [SerializeField] int startEggCount;
-    public int health = 0;
-    private int eggCount = 0;
+    public int health = 3;
+    private int eggCount = 2;
     private List<GameObject> inventory;
 
     // Start is called before the first frame update
@@ -33,6 +33,26 @@ public class PlayerStats : MonoBehaviour
             Debug.Log("ded");
             ResetScene();
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Hit: " +  collision.gameObject.name);
+        if(collision.gameObject.tag == "eggCollectable")
+        {
+            eggCount++;
+            Destroy(collision.gameObject);
+        }
+    }
+
+    public int getEggCount()
+    {
+        return eggCount;
+    }
+
+    public void EggShot()
+    {
+        eggCount--;
     }
 
     private void ResetScene()

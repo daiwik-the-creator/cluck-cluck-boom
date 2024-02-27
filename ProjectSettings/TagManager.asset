@@ -11,6 +11,7 @@ TagManager:
   - Egg
   - Ground
   - Wire
+  - eggCollectable
   layers:
   - Default
   - TransparentFX
