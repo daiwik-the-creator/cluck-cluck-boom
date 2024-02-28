@@ -22,7 +22,7 @@ public class EggBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Hit something! --- " + collision.name );
-        if(collision.tag == "Obstacle")
+        if(collision.tag != "Player")
         {
             Destroy(gameObject);
         }
