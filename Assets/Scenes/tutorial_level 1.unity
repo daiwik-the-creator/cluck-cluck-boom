@@ -877,6 +877,7 @@ GameObject:
   - component: {fileID: 142101603}
   - component: {fileID: 142101602}
   - component: {fileID: 142101605}
+  - component: {fileID: 142101606}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1002,6 +1003,40 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &142101606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142101601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &162413873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,29 +1602,17 @@ Transform:
   - {fileID: 86474410}
   - {fileID: 1304420597}
   - {fileID: 135633833}
-  - {fileID: 755671819}
-  - {fileID: 1435010572}
   - {fileID: 1321216271}
   - {fileID: 1842593084}
   - {fileID: 200614584}
-  - {fileID: 1608804776}
   - {fileID: 1975977421}
-  - {fileID: 335951765}
   - {fileID: 1402306022}
   - {fileID: 1862182329}
-  - {fileID: 479772811}
-  - {fileID: 1647619096}
   - {fileID: 1065591233}
-  - {fileID: 1448393160}
   - {fileID: 1407961818}
-  - {fileID: 581881194}
   - {fileID: 1225689858}
   - {fileID: 1162279492}
-  - {fileID: 1434811114}
-  - {fileID: 1625915145}
   - {fileID: 2020513096}
-  - {fileID: 1582944596}
-  - {fileID: 1884860461}
   - {fileID: 1296738985}
   - {fileID: 136693394}
   - {fileID: 2108317877}
@@ -1600,7 +1623,6 @@ Transform:
   - {fileID: 743564593}
   - {fileID: 120193340}
   - {fileID: 723999629}
-  - {fileID: 1619764354}
   - {fileID: 1830098939}
   - {fileID: 2006997844}
   - {fileID: 1243276481}
@@ -1608,9 +1630,6 @@ Transform:
   - {fileID: 700874017}
   - {fileID: 2026416626}
   - {fileID: 1749939487}
-  - {fileID: 1633724244}
-  - {fileID: 452551885}
-  - {fileID: 372294835}
   - {fileID: 682897932}
   - {fileID: 1995551331}
   - {fileID: 1346084832}
@@ -1621,17 +1640,15 @@ Transform:
   - {fileID: 1135805952}
   - {fileID: 1323540124}
   - {fileID: 1277640326}
-  - {fileID: 1658656320}
-  - {fileID: 442693624}
   - {fileID: 1291438070}
   - {fileID: 219445266}
   - {fileID: 162413874}
   - {fileID: 665726074}
   - {fileID: 1016769798}
   - {fileID: 922972708}
-  - {fileID: 817766981}
-  - {fileID: 452365063}
   - {fileID: 1039676013}
+  - {fileID: 507361567}
+  - {fileID: 1683338397}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &491768650 stripped
@@ -1654,6 +1671,11 @@ MonoBehaviour:
   startHealth: 0
   startEggCount: 0
   health: 0
+--- !u!4 &507361567 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8479644372429518239, guid: 53c099796ae7e544cb5590eddb44e306, type: 3}
+  m_PrefabInstance: {fileID: 826717296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &615354299
 GameObject:
   m_ObjectHideFlags: 0
@@ -2042,8 +2064,7 @@ PrefabInstance:
       propertyPath: playerSpeed
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6987143001513442618, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -7100,6 +7121,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4084421707430900549, guid: dd0d62f312a940d4499c5998a7fc8548, type: 3}
   m_PrefabInstance: {fileID: 1675230958}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1683338397 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8479644372429518239, guid: 53c099796ae7e544cb5590eddb44e306, type: 3}
+  m_PrefabInstance: {fileID: 2119971380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1749939486
 GameObject:
   m_ObjectHideFlags: 0
@@ -9572,17 +9598,11 @@ SceneRoots:
   - {fileID: 257668143}
   - {fileID: 672993260}
   - {fileID: 1433826643}
-  - {fileID: 436897033}
   - {fileID: 1309577794}
   - {fileID: 1675230958}
-  - {fileID: 1611400425}
   - {fileID: 1433621699}
   - {fileID: 1982266361}
-  - {fileID: 465174755}
   - {fileID: 8553908416942942331}
   - {fileID: 1185094478}
-  - {fileID: 435256611}
-  - {fileID: 755532612}
-  - {fileID: 1889839864}
   - {fileID: 1353528303}
   - {fileID: 837670399}
