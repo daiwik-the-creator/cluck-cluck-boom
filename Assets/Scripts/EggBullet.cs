@@ -6,6 +6,7 @@ public class EggBullet : MonoBehaviour
 {
     
     [SerializeField] float bulletSpeed = 2.0f;
+    private int numTargets = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +23,21 @@ public class EggBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Hit something! --- " + collision.name );
-        if(collision.tag != "Player")
+        if(collision.tag == "Obstacle")
         {
             Destroy(gameObject);
+        }
+
+        else if(collision.tag == "Target")
+        {
+            numTargets++;
+            Destroy(collision.gameObject);
+            if (numTargets >= 3)
+            {
+                 Destroy(gameObject);
+                numTargets = 0;
+            }
+
         }
        
     }

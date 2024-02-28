@@ -37,7 +37,7 @@ public class PlayerStats : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Hit: " +  collision.gameObject.name);
+        //Debug.Log("Hit: " +  collision.gameObject.name);
         if(collision.gameObject.tag == "eggCollectable")
         {
             eggCount++;
