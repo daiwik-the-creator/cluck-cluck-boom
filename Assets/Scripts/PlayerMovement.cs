@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using UnityEngine.UIElements;
+using static PlayerMovement;
+using System.Reflection;
+using JetBrains.Annotations;
+using Unity.VisualScripting;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,9 +22,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject camObj;
     [SerializeField] private float camFlipSpeed;
     [SerializeField] private Rigidbody2D myRb;
-    [SerializeField] private LayerMask groundLayer;
 
-    
+    [SerializeField]
+    public LayerMask[] GroundLayers;
+
     private void Start()
     {
         // get the player's rigidbody
@@ -34,10 +40,11 @@ public class PlayerMovement : MonoBehaviour
 
         Jump();
         Flip();
-        //CineCam();
+        CineCam();
 
         if (IsGrounded())
         {
+            
             canJump = true;
         }
 
@@ -55,10 +62,17 @@ public class PlayerMovement : MonoBehaviour
 
     public bool IsGrounded()
     {
-        // Raycasting example taken from GAME 290 -Unity Tutorial #1
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, myRb.transform.localScale.y + 0.1f, groundLayer);
+        return RayCastGroundLayers();
+    }
 
-        return hit.collider != null;
+    bool RayCastGroundLayers()
+    {
+        foreach (var layer in GroundLayers)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, myRb.transform.localScale.y + 0.1f, layer);
+            if (hit.collider!=null) return true;
+        }
+        return false;
     }
 
     private void Jump()
@@ -97,11 +111,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-   /* private void CineCam()
+    private void CineCam()
     {
         // Accessing the Transposer https://stackoverflow.com/questions/68615384/how-to-access-the-tracked-object-offset-in-the-body-of-cinemachinevirtualcamera
-        CinemachineFramingTransposer transposer = camObj.GetComponentInChildren<CinemachineFramingTransposer>();
-        
+        CinemachineFramingTransposer transposer = gameObject.GetComponent<RoomManager>().currentCamera().GetComponentInChildren<CinemachineFramingTransposer>();
+
         // Flipping Camera based on faced direction.
         if (isFacingRight && transposer.m_TrackedObjectOffset.x <= 1)
         {
@@ -123,6 +137,6 @@ public class PlayerMovement : MonoBehaviour
             transposer.m_YDamping -= 0.1f;
         }
 
-    }*/
+    }
 
 }

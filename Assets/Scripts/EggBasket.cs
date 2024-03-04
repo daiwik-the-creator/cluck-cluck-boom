@@ -20,6 +20,7 @@ public class EggBasket : MonoBehaviour
             SpriteRenderer sp = gameObject.GetComponent<SpriteRenderer>();           
             sp.sprite = greenBasket;
             wall.SetActive(false);
+            collision.gameObject.SetActive(false);
            
         }
     }

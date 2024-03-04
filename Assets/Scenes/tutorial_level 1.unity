@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 0.75
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -1879,15 +1879,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6213513273758678397, guid: bccd8e16346ca0c4da10dc446cf9e759, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].y
-      value: -4.743741
+      value: -5.0518036
       objectReference: {fileID: 0}
     - target: {fileID: 6213513273758678397, guid: bccd8e16346ca0c4da10dc446cf9e759, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].x
-      value: -9.627836
+      value: -9.669954
       objectReference: {fileID: 0}
     - target: {fileID: 6213513273758678397, guid: bccd8e16346ca0c4da10dc446cf9e759, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].y
-      value: -4.7546864
+      value: -5.0627494
       objectReference: {fileID: 0}
     - target: {fileID: 6213513273758678397, guid: bccd8e16346ca0c4da10dc446cf9e759, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].x
@@ -1935,8 +1935,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b1dc6d0c62eeb347b645cf8b9ae94d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 0
-  startEggCount: 0
+  startHealth: 5
+  startEggCount: 5
   health: 0
 --- !u!4 &491768666 stripped
 Transform:
@@ -2108,11 +2108,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.18
+      value: -7.46
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.01
+      value: -3.33
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2161,6 +2161,26 @@ PrefabInstance:
     - target: {fileID: 8893631450516583187, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: playerSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893631450516583187, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
+      propertyPath: GroundLayers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893631450516583187, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
+      propertyPath: groundLayer.ground.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893631450516583187, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
+      propertyPath: groundLayer.ground1.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893631450516583187, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
+      propertyPath: GroundLayers.Array.data[0].m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893631450516583187, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
+      propertyPath: GroundLayers.Array.data[1].m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8681,9 +8701,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2191108549282036212, guid: 53c099796ae7e544cb5590eddb44e306, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2303659506658040293, guid: 53c099796ae7e544cb5590eddb44e306, type: 3}
       propertyPath: m_Name
       value: PressurePlate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303659506658040293, guid: 53c099796ae7e544cb5590eddb44e306, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2903943919975468587, guid: 53c099796ae7e544cb5590eddb44e306, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9804,10 +9832,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 142101604}
+  - {fileID: 672993260}
   - {fileID: 823222816}
   - {fileID: 1196575743}
   - {fileID: 257668143}
-  - {fileID: 672993260}
   - {fileID: 1433826643}
   - {fileID: 1309577794}
   - {fileID: 1675230958}

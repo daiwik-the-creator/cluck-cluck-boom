@@ -9,8 +9,7 @@ public class RoomManager : MonoBehaviour
 {
     List<GameObject> Rooms = new List<GameObject>();
     private GameObject currRoom;
-    
-        
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Room"))
@@ -89,7 +88,7 @@ public class RoomManager : MonoBehaviour
     }
 
     
-    public bool IsGreater(GameObject x, GameObject y)
+    private bool IsGreater(GameObject x, GameObject y)
     {
         if (x.GetComponent<CinemachineVirtualCamera>().Priority > y.GetComponent<CinemachineVirtualCamera>().Priority)
         {
@@ -97,6 +96,11 @@ public class RoomManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    public GameObject currentCamera()
+    {
+        return currRoom;
     }
 
 }
