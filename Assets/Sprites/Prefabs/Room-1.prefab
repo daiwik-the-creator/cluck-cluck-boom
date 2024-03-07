@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 6.5
+    OrthographicSize: 5.75
     NearClipPlane: 6
     FarClipPlane: 1000
     Dutch: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BoundingShape2D: {fileID: 2126051469728347019}
-  m_Damping: 0
+  m_Damping: 5
   m_MaxWindowSize: -1
 --- !u!1 &2980671741423698981
 GameObject:

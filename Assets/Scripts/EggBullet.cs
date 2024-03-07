@@ -7,6 +7,7 @@ public class EggBullet : MonoBehaviour
     
     [SerializeField] float bulletSpeed = 2.0f;
     private int numTargets = 0;
+    [SerializeField] Sprite brokenEgg;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,13 @@ public class EggBullet : MonoBehaviour
                 numTargets = 0;
             }
 
+        }
+
+        if(collision.tag != "Player" && collision.tag != "Room" )
+        {
+            Destroy(gameObject.GetComponent<Rigidbody2D>());
+            gameObject.GetComponent<SpriteRenderer>().sprite = brokenEgg;
+            Destroy(gameObject,3.0f);
         }
        
     }
