@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8893631450516583187}
   - component: {fileID: 5902258618040682139}
   - component: {fileID: 1372226056002669002}
+  - component: {fileID: 2330195591798394025}
   m_Layer: 0
   m_Name: Beakley
   m_TagString: Player
@@ -219,6 +220,21 @@ MonoBehaviour:
   egg: {fileID: 7849251500302573809, guid: 78ec48b4524e8054e9f12340caa164b8, type: 3}
   explodingEgg: {fileID: 7849251500302573809, guid: 608a7a0a958b8b941a1d45f4aa296810, type: 3}
   shootingPoint: {fileID: 7565527256318132088}
+--- !u!114 &2330195591798394025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4183131020616776712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1dc6d0c62eeb347b645cf8b9ae94d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 0
+  startEggCount: 3
+  health: 3
 --- !u!1 &4802029937244345176
 GameObject:
   m_ObjectHideFlags: 0

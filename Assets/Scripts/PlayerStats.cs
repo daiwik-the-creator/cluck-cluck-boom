@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
 
-    [SerializeField] int startHealth;
+    [SerializeField] float startHealth;
     [SerializeField] int startEggCount;
-    public int health = 3;
+    public float health = 50f;
     private int eggCount = 2;
     private List<GameObject> inventory;
 
@@ -25,13 +25,13 @@ public class PlayerStats : MonoBehaviour
         
     }
 
-    public void InflictDamage(int damage)
+    public void InflictDamage(float damage)
     {
         health -= damage;
         if (health <= 0)
         {
             Debug.Log("ded");
-            ResetScene();
+            //ResetScene();
         }
     }
 

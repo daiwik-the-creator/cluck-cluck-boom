@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7195597687045882753}
   - component: {fileID: 5196951250801918462}
   - component: {fileID: 7516160971640168543}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: eggPrefab
   m_TagString: Egg
   m_Icon: {fileID: 0}

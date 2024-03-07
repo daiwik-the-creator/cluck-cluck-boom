@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2903943919975468587}
   - component: {fileID: 6409435387446704181}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: button_spriteSheet_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,9 +96,9 @@ GameObject:
   - component: {fileID: 7970224950076638106}
   - component: {fileID: 2958551201122536407}
   - component: {fileID: 4717012193993666814}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PressurePlate
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,6 +186,7 @@ MonoBehaviour:
   greenButton: {fileID: 2191108549282036212}
   platform: {fileID: 0}
   disabledPlatform: {fileID: 0}
+  isReversed: 0
 --- !u!61 &4717012193993666814
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -7,11 +7,12 @@ public class LiveWire : MonoBehaviour
 {
     Color c;
     public bool isLive = false;
-    public int damage = 1;
+    public float damage = 0.1f;
+    
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Start");
+        //Debug.Log("Start");
         c = gameObject.GetComponent<SpriteRenderer>().color;
         StartCoroutine(Live());
     }
@@ -42,15 +43,22 @@ public class LiveWire : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                Debug.Log("BZZZZZZZZZZZZZZZZZZ");
                 StartCoroutine(ElectrocutePlayer(other));
             }
+
+            else if(other.tag == "Peckable")
+            {
+                other.gameObject.GetComponent<chairSpawnnner>().resetPos();
+            }
+            
         }
 
     }
 
     IEnumerator ElectrocutePlayer(Collider2D player)
     {
+        Debug.Log("IM hERE");
+
         Vector2 startPos = player.transform.position;
         player.GetComponent<PlayerStats>().InflictDamage(damage);
         while (isLive)
