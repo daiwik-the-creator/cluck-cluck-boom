@@ -62,7 +62,6 @@ public class RoomManager : MonoBehaviour
                         }
                     }
 
-                    
                     Rooms[temp].SetActive(true);
                     currRoom = Rooms[temp];
                 }         
@@ -74,17 +73,13 @@ public class RoomManager : MonoBehaviour
     private void AddRoom(GameObject room)
     {
         if (!Rooms.Contains(room))
-        {
             Rooms.Add(room);
-        }
     }
 
     private void RemoveRoom(GameObject room)
     {
         if (Rooms.Contains(room))
-        {
             Rooms.Remove(room);
-        }
     }
 
     
@@ -102,5 +97,4 @@ public class RoomManager : MonoBehaviour
     {
         return currRoom;
     }
-
 }

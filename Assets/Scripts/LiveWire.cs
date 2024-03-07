@@ -11,7 +11,6 @@ public class LiveWire : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Start");
         c = gameObject.GetComponent<SpriteRenderer>().color;
         StartCoroutine(Live());
     }
