@@ -42,6 +42,7 @@ public class LiveWire : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
+                Debug.Log("BZZZZZZZZZZZZZZZZZZ");
                 StartCoroutine(ElectrocutePlayer(other));
             }
         }

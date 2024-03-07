@@ -177,12 +177,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad50e3cd31ccd041b74589422edc5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: 5
+  jumpForce: 12
   camObj: {fileID: 0}
   camFlipSpeed: 0.115
   myRb: {fileID: 6159794735946119057}
-  groundLayer:
-    serializedVersion: 2
+  GroundLayers:
+  - serializedVersion: 2
     m_Bits: 8
+  - serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &5902258618040682139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   egg: {fileID: 7849251500302573809, guid: 78ec48b4524e8054e9f12340caa164b8, type: 3}
+  explodingEgg: {fileID: 7849251500302573809, guid: 608a7a0a958b8b941a1d45f4aa296810, type: 3}
   shootingPoint: {fileID: 7565527256318132088}
 --- !u!1 &4802029937244345176
 GameObject:

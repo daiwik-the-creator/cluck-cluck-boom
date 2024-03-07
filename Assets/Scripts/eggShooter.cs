@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,7 +8,10 @@ public class eggShooter : MonoBehaviour
 {
     PlayerMovement player;
     public GameObject egg;
+    public GameObject explodingEgg;
     public Transform shootingPoint;
+
+    private String curEgg = "Egg";
     //private PlayerStats playerStats;
     
     
@@ -23,14 +27,31 @@ public class eggShooter : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) )
         {
-            if(!player.IsGrounded() && gameObject.GetComponent<PlayerStats>().getEggCount() > 0) {
+
+            if(curEgg == "Egg" && !player.IsGrounded() && gameObject.GetComponent<PlayerStats>().getEggCount() > 0) {
                 // spawn the egg only when player is in air and has an egg in this inventory. 
                 
                 Instantiate(egg, shootingPoint.position, transform.rotation);
                 gameObject.GetComponent<PlayerStats>().EggShot();
-
             }
-                       
+
+            else if (curEgg == "Bomb" && !player.IsGrounded() && gameObject.GetComponent<PlayerStats>().getEggCount() > 0)
+            {
+                // spawn the egg only when player is in air and has an egg in this inventory. 
+
+                Instantiate(explodingEgg, shootingPoint.position, transform.rotation);
+                gameObject.GetComponent<PlayerStats>().EggShot();
+            }
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            curEgg = "Egg";
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            curEgg = "Bomb";
         }
    }    
 }

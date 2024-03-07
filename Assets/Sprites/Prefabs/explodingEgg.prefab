@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1807203488632830212}
   - component: {fileID: 7195597687045882753}
   - component: {fileID: 5196951250801918462}
-  - component: {fileID: 7516160971640168543}
+  - component: {fileID: -1127613130836537997}
   m_Layer: 0
-  m_Name: eggPrefab
+  m_Name: explodingEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7849251500302573809}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.31, y: -1.2, z: 0}
+  m_LocalPosition: {x: -6.99, y: -0.69, z: 0}
   m_LocalScale: {x: 3.9229534, y: 3.9229534, z: 3.9229534}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -96,7 +96,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 7849251500302573809}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: e568c6d3041e37b45968fc1ce94f10f8, type: 2}
+  m_Material: {fileID: 6200000, guid: b068383a70aa679499c62d5bc32e8bc2, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -116,12 +116,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009428719, y: 0.12612739}
+  m_Offset: {x: -0.015099678, y: 0.13020459}
   serializedVersion: 2
-  m_Radius: 0.07639243
+  m_Radius: 0.07824911
 --- !u!50 &5196951250801918462
 Rigidbody2D:
   serializedVersion: 4
@@ -138,7 +138,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: e568c6d3041e37b45968fc1ce94f10f8, type: 2}
+  m_Material: {fileID: 6200000, guid: b068383a70aa679499c62d5bc32e8bc2, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -149,7 +149,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7516160971640168543
+--- !u!114 &-1127613130836537997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,8 +158,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7849251500302573809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 369515367523b364c9f037fcaef111fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 63f04736067ef7741b278aad708d9093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 2
-  brokenEgg: {fileID: 21300000, guid: 576713cf37f68dd4c97fab2ef547317c, type: 3}
+  BulletSpeed: 2
+  BlastRadius: 5
+  ExplosionForce: 2.43
