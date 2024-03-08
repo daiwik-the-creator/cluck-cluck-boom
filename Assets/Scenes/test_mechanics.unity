@@ -6037,6 +6037,7 @@ MonoBehaviour:
   greenButton: {fileID: 1561042106}
   platform: {fileID: 676155884}
   disabledPlatform: {fileID: 1517322473}
+  isReversed: 0
 --- !u!61 &1515742434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7867,6 +7868,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2330195591798394025, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4183131020616776712, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_Name
       value: Beakley

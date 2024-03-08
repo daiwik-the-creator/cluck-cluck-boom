@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRb: {fileID: 6159794735946119057}
-  peckForce: 100
+  peckForce: 50
   peckable:
     serializedVersion: 2
     m_Bits: 64
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 0
   startEggCount: 3
-  health: 3
+  health: 50
 --- !u!1 &4802029937244345176
 GameObject:
   m_ObjectHideFlags: 0
