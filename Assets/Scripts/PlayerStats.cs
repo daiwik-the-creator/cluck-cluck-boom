@@ -20,9 +20,9 @@ public class PlayerStats : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        //DontDestroyOnLoad(gameObject);
     }
 
     public void InflictDamage(float damage)
