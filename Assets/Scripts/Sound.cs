@@ -8,9 +8,9 @@ public class Sound
     public String name;
     public AudioClip clip;
 
-    [Range(0,5f)]
+    [Range(0,10f)]
     public float volume;
-    [Range (0,3)]
+    [Range (0,5)]
     public float pitch;
     public bool isLooped;
 
