@@ -29,7 +29,8 @@ public class Peck : MonoBehaviour
             if (hit.collider.CompareTag("Peckable"))
             {
                 hit.rigidbody.AddForce(peckDirection * peckForce, ForceMode2D.Impulse);
-                hit.collider.GetComponent<chairSpawnnner>().pecked(peckDirection);
+
+                hit.collider.GetComponent<Breakable>().Hit(peckDirection, peckForce);
 
             } else if (hit.collider.CompareTag("Breakable"))
             {

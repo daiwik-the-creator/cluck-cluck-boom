@@ -4,24 +4,20 @@ using UnityEngine;
 
 public class chairSpawnnner : MonoBehaviour
 {
-    public Vector3 orgLocation;
+    public Vector3 orgPosition;
+    public Quaternion orgRotation;
 
     private void Start()
     {
-        orgLocation = gameObject.transform.localPosition;
+        orgPosition = gameObject.transform.localPosition;
+        orgRotation = gameObject.transform.localRotation;
+
     }
 
     public void resetPos()
     {
-        gameObject.transform.localPosition = orgLocation;
+        gameObject.transform.localPosition = orgPosition;
+        gameObject.transform.localRotation = orgRotation;
     }
 
-    public void pecked(Vector2 direction)
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 1);
-        if (hit.collider.CompareTag("Ground"))
-        {
-            Debug.Log("mmm");
-        }
-    }
 }

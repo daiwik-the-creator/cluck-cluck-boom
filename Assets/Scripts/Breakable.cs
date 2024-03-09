@@ -25,17 +25,34 @@ public class Breakable : MonoBehaviour
         if (isShaking)
         {
             // Object shake in a small position https://forum.unity.com/threads/random-insideunitcirclea-around-a-certain-position.160257/
-            transform.position = startPos + UnityEngine.Random.insideUnitCircle * shakeAmount;
+            transform.position = startPos + Random.insideUnitCircle * shakeAmount;
         }
     }
 
+    // For static objects
     public void Hit()
     {
         //damage
-        isShaking = true;
         hit += 1;
-
+        isShaking = true;
         Invoke("StopShaking", shakeTime);
+            
+    }
+
+    // For dynamic objects
+    public void Hit(Vector2 forceDirection, float force)
+    {
+        hit += 1;
+        if (hit >= hitThreshold)
+        {
+            hit = 0;
+
+            Vector2 forceToCancel = -forceDirection * force;
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            rb.AddForce(forceToCancel, ForceMode2D.Impulse);
+
+            gameObject.GetComponent<chairSpawnnner>().resetPos();
+        }
     }
 
     void StopShaking()
