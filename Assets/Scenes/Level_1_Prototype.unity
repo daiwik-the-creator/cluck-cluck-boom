@@ -166,7 +166,7 @@ MonoBehaviour:
   - name: Theme
     clip: {fileID: 8300000, guid: c97a5f6db1fe5ba4d9397400284092ee, type: 3}
     volume: 5
-    pitch: 1
+    pitch: 1.53
     isLooped: 0
     source: {fileID: 0}
 --- !u!4 &59089234
@@ -3541,7 +3541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8695bca89ef65d94aa9fdece96b17b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Desk: {fileID: 740831463}
+  orgLocation: {x: 0, y: 0, z: 0}
 --- !u!4 &1241968062 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4935551113261000947, guid: 77513784cffbdd84c9607a69c6265005, type: 3}
