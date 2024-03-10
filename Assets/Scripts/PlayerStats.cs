@@ -19,13 +19,7 @@ public class PlayerStats : MonoBehaviour
         eggCount = startEggCount;
     }
 
-    // Update is called once per frame
-    private void Awake()
-    {
-        //DontDestroyOnLoad(gameObject);
-    }
-
-    public void InflictDamage(float damage)
+    public void InflictDamage(float damage)  // damage the player. 
     {
         health -= damage;
         if (health <= 0)
@@ -38,19 +32,19 @@ public class PlayerStats : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         //Debug.Log("Hit: " +  collision.gameObject.name);
-        if(collision.gameObject.tag == "eggCollectable")
+        if(collision.gameObject.tag == "eggCollectable")  // inrease egg count when player collides with a collectable egg. 
         {
             eggCount++;
             Destroy(collision.gameObject);
         }
     }
 
-    public int getEggCount()
+    public int getEggCount() // returns the egg count of the player. 
     {
         return eggCount;
     }
 
-    public void EggShot()
+    public void EggShot() // reduce egg count when egg is shot or a rat steals an egg.
     {
         eggCount--;
     }
