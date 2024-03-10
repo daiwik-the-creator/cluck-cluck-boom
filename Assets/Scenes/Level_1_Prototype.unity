@@ -164,31 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-<<<<<<< Updated upstream
-    clip: {fileID: 8300000, guid: c97a5f6db1fe5ba4d9397400284092ee, type: 3}
-    volume: 0.67
-    pitch: 0.48
-    isLooped: 1
-    source: {fileID: 0}
-  - name: Peck
-    clip: {fileID: 8300000, guid: 7d40edb30d963754382a326fa6f31ffc, type: 3}
-    volume: 6.7
-    pitch: 1
-    isLooped: 0
-    source: {fileID: 0}
-  - name: Jump
-    clip: {fileID: 8300000, guid: fee0f492c64bf87439cb33aedc9eaba2, type: 3}
-    volume: 6.12
-    pitch: 1
-    isLooped: 0
-    source: {fileID: 0}
-  - name: Walk
-    clip: {fileID: 8300000, guid: 144059b6fcbbb204297482d56b470e3f, type: 3}
-    volume: 6.27
-=======
     clip: {fileID: 8300000, guid: e528dbc091282df4ab2c65f18e491e7e, type: 3}
     volume: 5
->>>>>>> Stashed changes
     pitch: 1
     isLooped: 0
     source: {fileID: 0}
@@ -1011,11 +988,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53c099796ae7e544cb5590eddb44e306, type: 3}
-<<<<<<< Updated upstream
 --- !u!1 &407653048
-=======
---- !u!1 &387579190
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1023,7 +996,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
   - component: {fileID: 407653049}
   - component: {fileID: 407653051}
   - component: {fileID: 407653050}
@@ -1035,24 +1007,11 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &407653049
-=======
-  - component: {fileID: 387579191}
-  - component: {fileID: 387579192}
-  m_Layer: 0
-  m_Name: RatManager
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &387579191
->>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 407653048}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -1064,24 +1023,10 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &407653050
 TilemapRenderer:
-=======
-  m_GameObject: {fileID: 387579190}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.87, y: -0.3, z: -2.653307}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &387579192
-MonoBehaviour:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 407653048}
   m_Enabled: 1
   m_CastShadows: 0
@@ -27117,24 +27062,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
-=======
-  m_GameObject: {fileID: 387579190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f0deede84943b4093c0c0db4572bbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rats:
-  - rat: {fileID: 2933301592955816760, guid: 73cfd87d2f8c86843a240972fe99c0ca, type: 3}
-    startPoint: {fileID: 551238877}
-    endPoint: {fileID: 810888382}
-  - rat: {fileID: 2933301592955816760, guid: 73cfd87d2f8c86843a240972fe99c0ca, type: 3}
-    startPoint: {fileID: 155893232}
-    endPoint: {fileID: 464435276}
-  - rat: {fileID: 2933301592955816760, guid: 73cfd87d2f8c86843a240972fe99c0ca, type: 3}
-    startPoint: {fileID: 127694648}
-    endPoint: {fileID: 64050335}
->>>>>>> Stashed changes
 --- !u!1001 &434178740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27431,21 +27358,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8695bca89ef65d94aa9fdece96b17b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   orgPosition: {x: 0, y: 0, z: 0}
   orgRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &543214373
 MonoBehaviour:
-=======
-  orgLocation: {x: 0, y: 0, z: 0}
---- !u!1 &551238876
-GameObject:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 543214364}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -27454,33 +27374,6 @@ GameObject:
   m_EditorClassIdentifier: 
   hit: 0
   hitThreshold: 3
-=======
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 551238877}
-  m_Layer: 0
-  m_Name: startRat_0
-  m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &551238877
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551238876}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.56, y: -2.54, z: -0.9679666}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 221505714}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1001 &566944380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29232,19 +29125,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.x
-<<<<<<< Updated upstream
       value: 75.9
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.y
       value: -5.3
-=======
-      value: 41.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.73
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29982,12 +29867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8695bca89ef65d94aa9fdece96b17b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
-  orgPosition: {x: 0, y: 0, z: 0}
-  orgRotation: {x: 0, y: 0, z: 0, w: 0}
-=======
   orgLocation: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!4 &1241968062 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4935551113261000947, guid: 77513784cffbdd84c9607a69c6265005, type: 3}
