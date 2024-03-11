@@ -16,8 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private bool isFacingRight = true;
     private bool canJump = false;
-
-    [SerializeField] private AudioManager audioManager;
+    
     [SerializeField] private float playerSpeed = 8f;
     [SerializeField] private float jumpForce = 16f;
     [SerializeField] private GameObject camObj;
@@ -26,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     public LayerMask[] GroundLayers;
+    Sound s = null;
     //public AudioManager am;
 
     private void Start()
@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        audioManager.PlaySound("Walk");
         myRb.velocity = new Vector2(horizontal * playerSpeed, myRb.velocity.y);
 
         Jump();
@@ -55,6 +54,19 @@ public class PlayerMovement : MonoBehaviour
         {
             ResetScene();
         }
+
+        if (IsGrounded() && myRb.velocity!=Vector2.zero) 
+        {
+            s = audioManager.PlaySound("Walk");
+        } else
+        {
+            if (s!=null)
+            {
+                audioManager.StopSound(s);
+                s = null;
+            }
+        }
+
     }
 
     private void ResetScene()
@@ -87,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
         // Double Jump
         else if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
-            audioManager.PlaySound("Jump");
+            //am.PlaySound("DoubleJump");
             myRb.velocity = new Vector2(myRb.velocity.x, 16f);
             canJump = false;
         }

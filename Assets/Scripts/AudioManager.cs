@@ -11,7 +11,7 @@ public class AudioManager : MonoBehaviour
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-            s.source.loop = s.isLooped;
+            //s.source.loop = s.isLooped;
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
         }
@@ -19,20 +19,27 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        
-       PlaySound("Theme");
+        PlaySound("Theme");
     }
-   public void PlaySound(string sName)
+    public void PlaySound(string sName)
     {
         Debug.Log("trying to play" + sName);
         Sound s = Array.Find(sounds, sound => sound.name == sName);
         if (s == null)
         {
             Debug.Log("ERROR: Name not found");
-            return;
         }
             
         s.source.Play();
+        /*return s;*/
+    }
+
+    public void StopSound(Sound s)
+    {
+        if (s != null)
+        {
+            s.volume = 0;
+        }
         
     }
 
