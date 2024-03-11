@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Peckable
+  - Breakable
+  - Room
+  - Obstacle
+  - Egg
+  - Ground
+  - Wire
+  - eggCollectable
+  - Target
   layers:
   - Default
   - TransparentFX
@@ -12,7 +20,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
+  - Peckable
   - 
   - 
   - 
