@@ -169,6 +169,21 @@ MonoBehaviour:
     pitch: 1.53
     isLooped: 0
     source: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+  - name: Jump
+    clip: {fileID: 8300000, guid: fee0f492c64bf87439cb33aedc9eaba2, type: 3}
+    volume: 6.12
+    pitch: 1
+    isLooped: 0
+    source: {fileID: 0}
+  - name: Walk
+    clip: {fileID: 8300000, guid: d6810765a9102b044b31228a9fc51e1e, type: 3}
+    volume: 0
+    pitch: 0.67
+    isLooped: 1
+    source: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!4 &59089234
 Transform:
   m_ObjectHideFlags: 0
@@ -2969,6 +2984,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2330195591798394025, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
+      propertyPath: health
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2330195591798394025, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
+      propertyPath: startHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4183131020616776712, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_Name
       value: Beakley
@@ -2991,11 +3014,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< Updated upstream
       value: -6.71
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.33
+=======
+      value: -6.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.46
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.z
