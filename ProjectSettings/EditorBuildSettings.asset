@@ -7,5 +7,9 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  m_configObjects: {}
+    guid: b939ef1530d0f004a91413ef0c317003
+  - enabled: 0
+    path: Assets/Scenes/tutorial_level.unity
+    guid: a46a935c6a15a4a4594fe3160c7f69dd
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 1e0c52f063692dc4a9d8b3b6d450e1c1, type: 2}
