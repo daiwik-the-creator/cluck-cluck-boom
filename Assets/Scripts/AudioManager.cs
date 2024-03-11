@@ -22,17 +22,25 @@ public class AudioManager : MonoBehaviour
         
        PlaySound("Theme");
     }
-   public void PlaySound(string sName)
+   public Sound PlaySound(string sName)
     {
         Debug.Log("trying to play" + sName);
         Sound s = Array.Find(sounds, sound => sound.name == sName);
         if (s == null)
         {
             Debug.Log("ERROR: Name not found");
-            return;
         }
             
         s.source.Play();
+        return s;
+    }
+
+    public void StopSound(Sound s)
+    {
+        if (s != null)
+        {
+            s.volume = 0;
+        }
         
     }
 
