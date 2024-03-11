@@ -24,7 +24,7 @@ public class Peck : MonoBehaviour
     {
         Vector2 peckDirection = myRb.transform.localScale.x > 0 ? Vector2.right : Vector2.left;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, peckDirection, 99, peckable);
-        FindObjectOfType<AudioManager>().PlaySound("Peck");
+        
         if (hit && (hit.collider.GetComponent<Rigidbody2D>().position.x - myRb.position.x) <= 1.75f) {
             if (hit.collider.CompareTag("Peckable"))
             {
