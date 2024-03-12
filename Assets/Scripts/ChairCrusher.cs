@@ -21,12 +21,11 @@ public class ChairCrusher : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)   // Turn on Pressure plate 
+    private void OnCollisionEnter2D(Collision2D collision)   // Turn on 
     {
         if (collision.gameObject.tag == "Peckable")
         {
             Debug.Log("Chair detected");
-            CrushChair();
             gameObject.GetComponent<SpriteRenderer>().enabled = (false);
             //transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().enabled = true;
             
@@ -36,12 +35,6 @@ public class ChairCrusher : MonoBehaviour
             transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
 
-    }
-
-    public async void CrushChair()
-    {
-
-        
     }
 
 }
