@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class RatsRatsRats : MonoBehaviour
 {
-    private Transform startPoint;
-    private Transform endPoint;
+    public Transform startPoint ;
+    public Transform endPoint;
     public float ratSpeed = 0.5f;
     public Sprite RatWithEgg;
-    public GameObject collectableEgg;
-    public Transform spawnEgg;
-    private Vector2 target;
+    //public GameObject collectableEgg;
+   // public Transform spawnEgg;
+
    
 
     private void Start()
@@ -32,22 +32,26 @@ public class RatsRatsRats : MonoBehaviour
 
     public void Run()
     {
-        Debug.Log("run boi");
-        target = new Vector2(endPoint.position.x, endPoint.position.y);
-        Vector2 start = new Vector2(startPoint.position.x, startPoint.position.y);
-        Vector2 dir = target - start;
-        gameObject.GetComponent<Rigidbody2D>().velocity = dir * ratSpeed;
         
+            Vector2 dir = new Vector2(endPoint.position.x, endPoint.position.y )- new Vector2(startPoint.position.x, startPoint.position.y);
+            gameObject.GetComponent<Rigidbody2D>().velocity = dir * ratSpeed;
+          
+            Debug.Log("RUNNN");
+                   
         
     }
 
     private void Update()
     {
         // remove mouse when it gets to end point. 
-        if (Vector2.Distance(transform.position,target) < 1)
+        if(endPoint != null)
         {
-            Destroy(gameObject);
+            if (Vector2.Distance(transform.position, endPoint.position) < 1)
+            {
+                Destroy(gameObject);
+            }
         }
+       
        
     }
 

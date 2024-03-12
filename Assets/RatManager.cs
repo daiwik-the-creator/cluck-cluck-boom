@@ -6,7 +6,7 @@ public class RatManager : MonoBehaviour
 {
    
     public Rat[] rats;
-    private IEnumerator coroutine;
+   
     private void Start()
     {
       

@@ -144,12 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6d50c8600691648952a69c6fbf511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoint: {fileID: 0}
-  endPoint: {fileID: 0}
-  ratSpeed: 0.17
+  ratSpeed: 0.5
   RatWithEgg: {fileID: 21300000, guid: f71dfb4db2adc4347965b81d6a89beaf, type: 3}
-  collectableEgg: {fileID: 6848671958370826192, guid: c2355e940e77e0d449f964ba5127127e, type: 3}
-  spawnEgg: {fileID: 2088518560492916912, guid: c2355e940e77e0d449f964ba5127127e, type: 3}
 --- !u!50 &4885978096666793796
 Rigidbody2D:
   serializedVersion: 4
