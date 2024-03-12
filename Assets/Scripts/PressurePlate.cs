@@ -58,7 +58,7 @@ public class PressurePlate : MonoBehaviour
                 platform.GetComponent<SpriteRenderer>().enabled = true;
             }
             
-            //disabledPlatform.GetComponent<SpriteRenderer>().enabled = false;
+            disabledPlatform.GetComponent<SpriteRenderer>().enabled = false;
 
         } else
         {
@@ -76,7 +76,7 @@ public class PressurePlate : MonoBehaviour
                 platform.GetComponent<SpriteRenderer>().enabled = false;
             }
             
-            //disabledPlatform.GetComponent<SpriteRenderer>().enabled = true;
+            disabledPlatform.GetComponent<SpriteRenderer>().enabled = true;
 
         }
     }

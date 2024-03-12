@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7635370721544629424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4336090021508863048}
+  - component: {fileID: 9025933053565836606}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4336090021508863048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7635370721544629424}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.116533, y: 0.06313643, z: 0.12560692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9025933053565836606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7635370721544629424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab810628c4c4b74cb36e78dfac23fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 8417597d8ab529f4f99edc6e03f1c43f, type: 3}
+    volume: 1.5
+    pitch: 1
+    isLooped: 1
+    source: {fileID: 0}
+  - name: Peck
+    clip: {fileID: 8300000, guid: 7d40edb30d963754382a326fa6f31ffc, type: 3}
+    volume: 6.7
+    pitch: 1
+    isLooped: 0
+    source: {fileID: 0}
+  - name: Walk
+    clip: {fileID: 8300000, guid: d6810765a9102b044b31228a9fc51e1e, type: 3}
+    volume: 1.96
+    pitch: 0.43
+    isLooped: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: ddfaa39f9a441264db7bd97404e38940, type: 3}
+    volume: 6.12
+    pitch: 1
+    isLooped: 0
+    source: {fileID: 0}
+  - name: DoubleJump
+    clip: {fileID: 8300000, guid: fee0f492c64bf87439cb33aedc9eaba2, type: 3}
+    volume: 1.96
+    pitch: 0.43
+    isLooped: 0
+    source: {fileID: 0}
+  - name: Glide
+    clip: {fileID: 8300000, guid: f36e0a5115a882c4bbe3f17969120b77, type: 3}
+    volume: 1.96
+    pitch: 0.43
+    isLooped: 0
+    source: {fileID: 0}
+  - name: EggPickUp
+    clip: {fileID: 8300000, guid: 1364464857aee9d47b98769038dfa693, type: 3}
+    volume: 1.96
+    pitch: 0.43
+    isLooped: 0
+    source: {fileID: 0}
+  - name: c12PickUp
+    clip: {fileID: 8300000, guid: de86671c560cf6b4f89cf635547c0c45, type: 3}
+    volume: 1.96
+    pitch: 0.43
+    isLooped: 0
+    source: {fileID: 0}
+  - name: C12explosion
+    clip: {fileID: 8300000, guid: 923a7db250ca6b64b90b88a3bed7b545, type: 3}
+    volume: 5.67
+    pitch: 1
+    isLooped: 0
+    source: {fileID: 0}
+  - name: eggThrow
+    clip: {fileID: 8300000, guid: f428b13fb05619e46aefad957a2942a5, type: 3}
+    volume: 5.67
+    pitch: 1
+    isLooped: 0
+    source: {fileID: 0}
+  - name: c12Throw
+    clip: {fileID: 8300000, guid: 51bf01b8cb279c547877668a80e4c984, type: 3}
+    volume: 5.67
+    pitch: 1
+    isLooped: 0
+    source: {fileID: 0}
