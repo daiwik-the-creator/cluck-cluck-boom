@@ -28669,8 +28669,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 797297ab932608a4a82f9eb31d0f67e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upspeed: 6
-  downspeed: 12
+  upspeed: 4
+  downspeed: 10
   up: {fileID: 917089148}
   down: {fileID: 1129564615}
 --- !u!61 &917089151
