@@ -52,7 +52,7 @@ public class Breakable : MonoBehaviour
             rb.AddForce(forceToCancel, ForceMode2D.Impulse);
 
             gameObject.GetComponent<chairSpawnnner>().resetPos();
-        }
+        }   
     }
 
     void StopShaking()
