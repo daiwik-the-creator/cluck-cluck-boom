@@ -218,7 +218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 72340919}
   - component: {fileID: 72340920}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ChairCrusherOpen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -898,9 +898,9 @@ GameObject:
   - component: {fileID: 355429947}
   - component: {fileID: 355429948}
   - component: {fileID: 355429949}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ChairCrusherClosed
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29502,7 +29502,7 @@ GameObject:
   - component: {fileID: 1129564615}
   - component: {fileID: 1129564614}
   m_Layer: 0
-  m_Name: Fork
+  m_Name: CrushHere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29569,11 +29569,11 @@ Transform:
   m_GameObject: {fileID: 1129564613}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.15, y: -2.3, z: 0}
+  m_LocalPosition: {x: 20.44, y: -8.88, z: 3.2770894}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1398017918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1162044672
 PrefabInstance:
@@ -37002,6 +37002,7 @@ Transform:
   - {fileID: 644624611}
   - {fileID: 1477114988}
   - {fileID: 917089148}
+  - {fileID: 1129564615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1413723575 stripped
@@ -39498,7 +39499,6 @@ SceneRoots:
   - {fileID: 213773801}
   - {fileID: 1062302583}
   - {fileID: 670750172}
-  - {fileID: 1129564615}
   - {fileID: 1842325386}
   - {fileID: 2135490071}
   - {fileID: 1934054513}
