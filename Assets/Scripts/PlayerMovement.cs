@@ -25,8 +25,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     public LayerMask[] GroundLayers;
-    Sound s = null;
-    //public AudioManager am;
+    
+    public AudioManager am;
 
     private void Start()
     {
@@ -57,15 +57,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (IsGrounded() && myRb.velocity!=Vector2.zero) 
         {
-            s = audioManager.PlaySound("Walk");
-        } else
-        {
-            if (s!=null)
-            {
-                audioManager.StopSound(s);
-                s = null;
-            }
-        }
+            am.PlaySound("Walk");
+        } 
 
     }
 
