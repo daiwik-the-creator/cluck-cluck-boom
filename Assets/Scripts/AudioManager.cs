@@ -34,14 +34,12 @@ public class AudioManager : MonoBehaviour
         /*return s;*/
     }
 
-    public void StopSound(Sound s)
+    public AudioSource getSource(string sName)
     {
-        if (s != null)
-        {
-            s.volume = 0;
-        }
-        
+        Sound s = Array.Find(sounds, sound => sound.name == sName);
+        return s.source;
     }
+
 
 }
 //heavily inspired from - Brackys unity audio tutorial, https://www.youtube.com/watch?v=6OT43pvUyfY

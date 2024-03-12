@@ -15,6 +15,7 @@ public class Peck : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightShift) && !isPecking)
         {
             isPecking = true;
+            FindObjectOfType<AudioManager>().PlaySound("Peck");
             StartCoroutine(DoPeck());
 
         }

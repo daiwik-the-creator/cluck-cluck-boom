@@ -27,11 +27,15 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask[] GroundLayers;
     
     public AudioManager am;
+    private AudioSource walkSource;
+    private AudioSource glideSource;
 
     private void Start()
     {
         // get the player's rigidbody
         myRb = GetComponent<Rigidbody2D>();
+        walkSource = am.getSource("Walk");
+        glideSource = am.getSource("Glide");
 
     }
 
@@ -39,11 +43,25 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         myRb.velocity = new Vector2(horizontal * playerSpeed, myRb.velocity.y);
-
+       
         Jump();
         Flip();
         CineCam();
 
+        if (IsGrounded() && horizontal != 0 )
+        {
+            if (!walkSource.isPlaying)
+            {
+                Debug.Log("Playing walk.");
+                am.PlaySound("Walk");
+            }
+           
+            //walkSource = am.getSource("Walk");
+        }
+       /* else if(!IsGrounded() && horizontal == 0)
+        {
+            walkSource.Stop();
+        }*/
         if (IsGrounded())
         {
             
@@ -55,10 +73,6 @@ public class PlayerMovement : MonoBehaviour
             ResetScene();
         }
 
-        if (IsGrounded() && myRb.velocity!=Vector2.zero) 
-        {
-            am.PlaySound("Walk");
-        } 
 
     }
 
@@ -87,12 +101,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
+            am.PlaySound("Jump");
             myRb.velocity = new Vector2(myRb.velocity.x, jumpForce);
         }
         // Double Jump
         else if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
-            //am.PlaySound("DoubleJump");
+            am.PlaySound("DoubleJump" );
             myRb.velocity = new Vector2(myRb.velocity.x, 16f);
             canJump = false;
         }
@@ -100,10 +115,15 @@ public class PlayerMovement : MonoBehaviour
         // Glide
         if (Input.GetKey(KeyCode.Space) && !IsGrounded() && myRb.velocity.y < 0f)
         {
+            Debug.Log("Trying to play glide");
+           
+               
+            am.PlaySound("Glide");
             myRb.gravityScale = 0.5f;
         }
         else
         {
+            glideSource.Stop();
             myRb.gravityScale = 4f;
         }
     }

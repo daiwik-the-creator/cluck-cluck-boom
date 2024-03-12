@@ -10,6 +10,7 @@ public class ExplodingEgg : MonoBehaviour
     [SerializeField] float BlastRadius;
     [SerializeField] float ExplosionForce;
     private bool hasExploded = false;
+    public bool seeRadius = false;
 
 
     // Start is called before the first frame update
@@ -33,6 +34,7 @@ public class ExplodingEgg : MonoBehaviour
             numBounces++;
             if (numBounces > 1 && !hasExploded)
             {
+                
                 Debug.Log("BOOM!!");
                 Explode();
             }
@@ -45,6 +47,7 @@ public class ExplodingEgg : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1) && !hasExploded)
         {
+            FindObjectOfType<AudioManager>().PlaySound("Peck");
             Debug.Log("BOOMM");
             Explode();
         }
@@ -54,6 +57,7 @@ public class ExplodingEgg : MonoBehaviour
     void Explode()
     {
         hasExploded = true;
+        FindObjectOfType<AudioManager>().PlaySound("C12explosion");
         Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, BlastRadius);
         Destroy(gameObject);
         foreach(Collider2D col in cols)
@@ -69,7 +73,11 @@ public class ExplodingEgg : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawSphere (transform.position, BlastRadius);
+        if (seeRadius)
+        {
+            Gizmos.DrawSphere(transform.position, BlastRadius);
+        }
+        
     }
 
 

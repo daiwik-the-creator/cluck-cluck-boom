@@ -30,7 +30,7 @@ public class eggShooter : MonoBehaviour
 
             if(curEgg == "Egg" && !player.IsGrounded() && gameObject.GetComponent<PlayerStats>().getEggCount() > 0) {
                 // spawn the egg only when player is in air and has an egg in this inventory. 
-                
+                FindObjectOfType<AudioManager>().PlaySound("eggThrow");
                 Instantiate(egg, shootingPoint.position, transform.rotation);
                 gameObject.GetComponent<PlayerStats>().EggShot();
             }
@@ -38,7 +38,7 @@ public class eggShooter : MonoBehaviour
             else if (curEgg == "Bomb" && !player.IsGrounded() && gameObject.GetComponent<PlayerStats>().getEggCount() > 0)
             {
                 // spawn the egg only when player is in air and has an egg in this inventory. 
-
+                FindObjectOfType<AudioManager>().PlaySound("eggThrow");
                 Instantiate(explodingEgg, shootingPoint.position, transform.rotation);
                 gameObject.GetComponent<PlayerStats>().EggShot();
             }
