@@ -25,7 +25,7 @@ public class PlayerStats : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("ded");
-            //ResetScene();
+            ResetScene();
         }
     }
 

@@ -28,10 +28,18 @@ public class AudioManager : MonoBehaviour
         if (s == null)
         {
             Debug.Log("ERROR: Name not found");
-            return;
         }
             
         s.source.Play();
+        /*return s;*/
+    }
+
+    public void StopSound(Sound s)
+    {
+        if (s != null)
+        {
+            s.volume = 0;
+        }
         
     }
 
