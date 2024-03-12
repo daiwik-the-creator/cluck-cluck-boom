@@ -25,7 +25,7 @@ public class ChairCrusher : MonoBehaviour
     {
         if (collision.gameObject.tag == "Peckable")
         {
-            Debug.Log("Chair detected");
+            Debug.Log("Chair detected");    
             gameObject.GetComponent<SpriteRenderer>().enabled = (false);
             //transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().enabled = true;
             
