@@ -1,14 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
-using UnityEngine.UIElements;
-using static PlayerMovement;
-using System.Reflection;
-using JetBrains.Annotations;
-using Unity.VisualScripting;
+
 
 public class PlayerMovement : MonoBehaviour
 {
