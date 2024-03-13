@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1707909913703634839}
   - component: {fileID: 3652098781224376811}
   - component: {fileID: 7027189953733163840}
+  - component: {fileID: 8981542686747095088}
+  - component: {fileID: 444655238709275034}
   m_Layer: 6
   m_Name: Office_chair
   m_TagString: Peckable
@@ -178,3 +180,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &8981542686747095088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3118765408200298653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8695bca89ef65d94aa9fdece96b17b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orgPosition: {x: 0, y: 0, z: 0}
+  orgRotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &444655238709275034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3118765408200298653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85466ade935e96d43bc027ebd5194958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hit: 0
+  hitThreshold: 3

@@ -7,7 +7,7 @@ public class LiveWire : MonoBehaviour
 {
     Color c;
     public bool isLive = false;
-    public float damage = 0.1f;
+    public float damage = 1f;
     
     // Start is called before the first frame update
     void Start()
@@ -41,8 +41,10 @@ public class LiveWire : MonoBehaviour
     {
         if (isLive)
         {
-            if (other.gameObject.CompareTag("Player"))
+            if (other.gameObject.CompareTag("Player") && other.GetComponent<PlayerStats>().isElectrocuted == false)
             {
+                // Fix for multiple electrocutions.
+                other.GetComponent<PlayerStats>().isElectrocuted = true;
                 StartCoroutine(ElectrocutePlayer(other));
             }
 
@@ -57,8 +59,6 @@ public class LiveWire : MonoBehaviour
 
     IEnumerator ElectrocutePlayer(Collider2D player)
     {
-        Debug.Log("IM hERE");
-
         Vector2 startPos = player.transform.position;
         player.GetComponent<PlayerStats>().InflictDamage(damage);
         while (isLive)
@@ -66,7 +66,8 @@ public class LiveWire : MonoBehaviour
             player.transform.position = startPos + Random.insideUnitCircle * .1f;
             yield return null;
         }
-        
+        player.GetComponent<PlayerStats>().isElectrocuted = false;
+
     }
 
 }

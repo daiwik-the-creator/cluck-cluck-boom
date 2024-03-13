@@ -13,6 +13,7 @@ public class PlayerStats : MonoBehaviour
     private int eggCount = 2;
     //private List<GameObject> inventory;
     private AudioManager am;
+    public bool isElectrocuted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -66,4 +67,6 @@ public class PlayerStats : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
     }
+
+    
 }
