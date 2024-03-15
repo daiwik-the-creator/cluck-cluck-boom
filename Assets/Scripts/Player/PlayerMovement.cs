@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     private bool isFacingRight = true;
-    private bool canJump = false;
+    private bool canJump = true;
     
     [SerializeField] private float playerSpeed = 8f;
     [SerializeField] private float jumpForce = 16f;
@@ -50,15 +50,12 @@ public class PlayerMovement : MonoBehaviour
                 am.PlaySound("Walk");
             }
            
-            //walkSource = am.getSource("Walk");
+          
         }
-       /* else if(!IsGrounded() && horizontal == 0)
-        {
-            walkSource.Stop();
-        }*/
+ 
         if (IsGrounded())
         {
-            
+            Debug.Log("I am grounded!!!!!");
             canJump = true;
         }
 
@@ -93,6 +90,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        if (IsGrounded())
+        {
+            Debug.Log("I am grounded!!!!!");
+            canJump = true;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             am.PlaySound("Jump");
@@ -140,7 +143,7 @@ public class PlayerMovement : MonoBehaviour
         CinemachineFramingTransposer transposer = gameObject.GetComponent<RoomManager>().currentCamera().GetComponentInChildren<CinemachineFramingTransposer>();
 
         // Flipping Camera based on faced direction.
-        if (isFacingRight && transposer.m_TrackedObjectOffset.x <= 1)
+        if (isFacingRight && transposer.m_TrackedObjectOffset.x <= 1) 
         {
             transposer.m_TrackedObjectOffset.x += camFlipSpeed;
 

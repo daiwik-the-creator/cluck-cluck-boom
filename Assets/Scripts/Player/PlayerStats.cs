@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +11,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] int startEggCount;
     [SerializeField] int c12count;
     public float health = 50f;
-    private int eggCount = 2;
+    private int eggCount = 3;
+    private int boomEggCount = 1;
     //private List<GameObject> inventory;
     private AudioManager am;
     public bool isElectrocuted = false;
@@ -22,6 +24,7 @@ public class PlayerStats : MonoBehaviour
         eggCount = startEggCount;
         am = gameObject.GetComponent<PlayerMovement>().am;
     }
+
 
     public void InflictDamage(float damage)  // damage the player. 
     {
@@ -43,10 +46,10 @@ public class PlayerStats : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if (collision.gameObject.tag == "c12")  // inrease egg count when player collides with a collectable egg. 
+        if (collision.gameObject.tag == "C12")  // inrease egg count when player collides with a collectable egg. 
         {
             am.PlaySound("c12PickUp");
-            eggCount++;
+            boomEggCount++;
             Destroy(collision.gameObject);
         }
 
@@ -57,15 +60,29 @@ public class PlayerStats : MonoBehaviour
         return eggCount;
     }
 
+    public int getExploEggCount() // returns the exploding egg count of the player. 
+    {
+        return boomEggCount;
+    }
+
     public void EggShot() // reduce egg count when egg is shot or a rat steals an egg.
     {
         eggCount--;
     }
+    public void ExploEggShot() // reduce explo egg count
+    {
+        boomEggCount--;
+    }
 
-    private void ResetScene()
+    private void ResetScene() // reset the current scene
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    public void eggInc() // used to add eggs (invoked in another script) 
+    {
+        eggCount++;
     }
 
     

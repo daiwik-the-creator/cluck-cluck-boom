@@ -20,6 +20,7 @@ public class eggShooter : MonoBehaviour
     void Start()
     {
         player = GetComponent<PlayerMovement>();
+        StartCoroutine(IncreaseEgg());
     }
 
     // Update is called once per frame
@@ -27,7 +28,7 @@ public class eggShooter : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) )
         {
-
+            // shoot egg
             if(curEgg == "Egg" && !player.IsGrounded() && gameObject.GetComponent<PlayerStats>().getEggCount() > 0) {
                 // spawn the egg only when player is in air and has an egg in this inventory. 
                 FindObjectOfType<AudioManager>().PlaySound("eggThrow");
@@ -35,16 +36,18 @@ public class eggShooter : MonoBehaviour
                 gameObject.GetComponent<PlayerStats>().EggShot();
             }
 
-            else if (curEgg == "Bomb" && !player.IsGrounded() && gameObject.GetComponent<PlayerStats>().getEggCount() > 0)
+            // shoot c12
+            else if (curEgg == "Bomb" && !player.IsGrounded() && gameObject.GetComponent<PlayerStats>().getExploEggCount() > 0)
             {
                 // spawn the egg only when player is in air and has an egg in this inventory. 
                 FindObjectOfType<AudioManager>().PlaySound("c12Throw");
                 Instantiate(explodingEgg, shootingPoint.position, transform.rotation);
-                gameObject.GetComponent<PlayerStats>().EggShot();
+                gameObject.GetComponent<PlayerStats>().ExploEggShot();
             }
 
         }
 
+        // toggle between c12 and egg
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             curEgg = "Egg";
@@ -53,5 +56,20 @@ public class eggShooter : MonoBehaviour
         {
             curEgg = "Bomb";
         }
-   }    
+
+        
+        
+        
+   }  
+    
+    // making the no. of eggs unlimited and giving it a cooldown. 
+    IEnumerator IncreaseEgg()
+    {
+        yield return new WaitForSeconds(3f);
+        if (gameObject.GetComponent<PlayerStats>().getEggCount() <= 0)
+        {
+           gameObject.GetComponent<PlayerStats>().eggInc();
+        }
+        StartCoroutine(IncreaseEgg());
+    }
 }

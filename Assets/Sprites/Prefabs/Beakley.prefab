@@ -188,6 +188,7 @@ MonoBehaviour:
     m_Bits: 8
   - serializedVersion: 2
     m_Bits: 64
+  am: {fileID: 0}
 --- !u!114 &5902258618040682139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,9 +233,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b1dc6d0c62eeb347b645cf8b9ae94d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 0
+  startHealth: 3
   startEggCount: 3
-  health: 50
+  c12count: 0
+  health: 0
+  isElectrocuted: 0
 --- !u!1 &4802029937244345176
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ TagManager:
   - Wire
   - eggCollectable
   - Target
+  - C12
   layers:
   - Default
   - TransparentFX

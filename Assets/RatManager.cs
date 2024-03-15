@@ -24,11 +24,11 @@ public class RatManager : MonoBehaviour
 
     IEnumerator SpawnRat(float waitTime)
     {
-        Debug.Log(Time.time);
+       // Debug.Log(Time.time);
         int point = Random.Range(0, rats.Length);
         Instantiate(rats[point].rat, rats[point].startPoint.position, Quaternion.identity);
         yield return new WaitForSeconds(waitTime);
-        Debug.Log(Time.time);
+        //Debug.Log(Time.time);
         StartCoroutine(SpawnRat(waitTime));
     }
 }
