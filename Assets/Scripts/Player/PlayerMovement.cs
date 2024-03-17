@@ -28,8 +28,8 @@ public class PlayerMovement : MonoBehaviour
     {
         // get the player's rigidbody
         myRb = GetComponent<Rigidbody2D>();
-        walkSource = am.getSource("Walk");
-        glideSource = am.getSource("Glide");
+        /*walkSource = am.getSource("Walk");
+        glideSource = am.getSource("Glide");*/
 
     }
 
@@ -44,11 +44,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (IsGrounded() && horizontal != 0 )
         {
-            if (!walkSource.isPlaying)
+            /*if (!walkSource.isPlaying)
             {
                 Debug.Log("Playing walk.");
                 am.PlaySound("Walk");
-            }
+            }*/
            
             //walkSource = am.getSource("Walk");
         }
@@ -95,13 +95,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
-            am.PlaySound("Jump");
+            //am.PlaySound("Jump");
             myRb.velocity = new Vector2(myRb.velocity.x, jumpForce);
+            
         }
         // Double Jump
         else if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
-            am.PlaySound("DoubleJump" );
+            //am.PlaySound("DoubleJump" );
             myRb.velocity = new Vector2(myRb.velocity.x, 16f);
             canJump = false;
         }
@@ -112,12 +113,12 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Trying to play glide");
            
                
-            am.PlaySound("Glide");
+           /* am.PlaySound("Glide");*/
             myRb.gravityScale = 0.5f;
         }
         else
         {
-            glideSource.Stop();
+            /*glideSource.Stop();*/
             myRb.gravityScale = 4f;
         }
     }
