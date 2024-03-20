@@ -60,12 +60,12 @@ public class LiveWire : MonoBehaviour
     IEnumerator ElectrocutePlayer(Collider2D player)
     {
         Vector2 startPos = player.transform.position;
-        player.GetComponent<PlayerStats>().InflictDamage(damage);
         while (isLive)
         {
             player.transform.position = startPos + Random.insideUnitCircle * .1f;
             yield return null;
         }
+        player.GetComponent<PlayerStats>().InflictDamage(damage);
         player.GetComponent<PlayerStats>().isElectrocuted = false;
 
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,6 +17,7 @@ public class PlayerStats : MonoBehaviour
     //private List<GameObject> inventory;
     private AudioManager am;
     public bool isElectrocuted = false;
+    public Respawn respawn;
 
     // Start is called before the first frame update
     void Start()
@@ -31,8 +33,8 @@ public class PlayerStats : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            Debug.Log("ded");
-            ResetScene();
+            Debug.Log("lmaoded");
+            respawn.GetComponent<Respawn>().Spawn();
         }
     }
 

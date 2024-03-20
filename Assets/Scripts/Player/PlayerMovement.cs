@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
  
         if (IsGrounded())
         {
-            Debug.Log("I am grounded!!!!!");
+            //Debug.Log("I am grounded!!!!!");
             canJump = true;
         }
 
@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (IsGrounded())
         {
-            Debug.Log("I am grounded!!!!!");
+            //Debug.Log("I am grounded!!!!!");
             canJump = true;
         }
 

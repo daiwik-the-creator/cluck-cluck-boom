@@ -21,7 +21,7 @@ public class RatsRatsRats : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("Hit Player");
+            //Debug.Log("Hit Player");
             gameObject.GetComponent<SpriteRenderer>().sprite = RatWithEgg;
             //collision.GetComponent<PlayerStats>().EggShot();
             //Instantiate(collectableEgg,spawnEgg);
@@ -36,7 +36,7 @@ public class RatsRatsRats : MonoBehaviour
             Vector2 dir = new Vector2(endPoint.position.x, endPoint.position.y )- new Vector2(startPoint.position.x, startPoint.position.y);
             gameObject.GetComponent<Rigidbody2D>().velocity = dir * ratSpeed;
           
-            Debug.Log("RUNNN");
+            //Debug.Log("RUNNN");
                    
         
     }

@@ -16,7 +16,7 @@ public class RatManager : MonoBehaviour
             r.rat.GetComponent<RatsRatsRats>().setEndPoint(r.endPoint);
            
         }
-        Debug.Log("Tryin to spawn rat");
+        //Debug.Log("Tryin to spawn rat");
         StartCoroutine(SpawnRat(2f));
 
 
