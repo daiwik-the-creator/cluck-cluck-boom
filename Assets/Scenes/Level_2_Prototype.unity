@@ -3463,6 +3463,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2088518560492916912, guid: c2355e940e77e0d449f964ba5127127e, type: 3}
   m_PrefabInstance: {fileID: 646141203}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &602369596 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1540756604830527180, guid: 608a7a0a958b8b941a1d45f4aa296810, type: 3}
+  m_PrefabInstance: {fileID: 1030653292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &604995400 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 957511442598255585, guid: 15f696b320e0aa946b8635fc65338b2a, type: 3}
@@ -13024,6 +13029,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8893631450516583187, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
+      propertyPath: am
+      value: 
+      objectReference: {fileID: 1758434665}
     - target: {fileID: 8893631450516583187, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: camObj
       value: 
@@ -84747,6 +84756,7 @@ Transform:
   - {fileID: 1079776608}
   - {fileID: 1401096675}
   - {fileID: 1715805544}
+  - {fileID: 602369596}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1328207049 stripped
@@ -86551,6 +86561,10 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 9025933053565836606, guid: ac92309b02d83f3449a58643bd9af845, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: EggPickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025933053565836606, guid: ac92309b02d83f3449a58643bd9af845, type: 3}
       propertyPath: sounds.Array.data[2].pitch
       value: 0.76
       objectReference: {fileID: 0}
@@ -86938,6 +86952,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 957511442598255585, guid: 15f696b320e0aa946b8635fc65338b2a, type: 3}
   m_PrefabInstance: {fileID: 448991553}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1758434665 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9025933053565836606, guid: ac92309b02d83f3449a58643bd9af845, type: 3}
+  m_PrefabInstance: {fileID: 1666445971}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab810628c4c4b74cb36e78dfac23fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1758614929
 PrefabInstance:
   m_ObjectHideFlags: 0
