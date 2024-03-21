@@ -14,6 +14,7 @@ TagManager:
   - eggCollectable
   - Target
   - C12
+  - GoldenEgg
   layers:
   - Default
   - TransparentFX
