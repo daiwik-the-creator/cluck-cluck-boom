@@ -14,8 +14,6 @@ public class Respawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-
         for (int i=0; i<transform.childCount; i++)
         {
             RespawnPoints.Add(transform.GetChild(i).position);
@@ -26,10 +24,8 @@ public class Respawn : MonoBehaviour
 
     public void Spawn()
     {
-        int spawnIndex = Beakley.transform.GetComponent<RoomManager>().currentCamera().name.ToCharArray().Last() - '0';
-        Debug.Log(Beakley.transform.GetComponent<RoomManager>().currentCamera().name);
-        Debug.Log(spawnIndex);
-        Debug.Log(RespawnPoints[spawnIndex - 1]);
+        GameObject currCam = Beakley.transform.GetComponent<RoomManager>().currentCamera();
+        int spawnIndex = currCam.name.ToCharArray().Last() - '0';
         Beakley.transform.localPosition = RespawnPoints[spawnIndex -1];
     }
 

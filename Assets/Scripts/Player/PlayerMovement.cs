@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (!walkSource.isPlaying)
             {
-                Debug.Log("Playing walk.");
+                //Debug.Log("Playing walk.");
                 am.PlaySound("Walk");
             }
            
@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
         // Glide
         if (Input.GetKey(KeyCode.Space) && !IsGrounded() && myRb.velocity.y < 0f)
         {
-            Debug.Log("Trying to play glide");
+            //Debug.Log("Trying to play glide");
            
                
             glideSource.Play();
