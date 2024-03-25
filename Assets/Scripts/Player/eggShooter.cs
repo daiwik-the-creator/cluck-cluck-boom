@@ -65,7 +65,7 @@ public class eggShooter : MonoBehaviour
     // making the no. of eggs unlimited and giving it a cooldown. 
     IEnumerator IncreaseEgg()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         if (gameObject.GetComponent<PlayerStats>().getEggCount() <= 0)
         {
            gameObject.GetComponent<PlayerStats>().eggInc();
