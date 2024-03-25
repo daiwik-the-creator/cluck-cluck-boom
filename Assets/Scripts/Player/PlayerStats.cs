@@ -11,7 +11,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] float startHealth;
     [SerializeField] int startEggCount;
     [SerializeField] int c12count;
-    public float health = 50f;
+    public float health = 0f;
     private int eggCount = 3;
     private int boomEggCount = 1;
     //private List<GameObject> inventory;
