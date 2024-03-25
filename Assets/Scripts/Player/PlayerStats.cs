@@ -11,9 +11,10 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] float startHealth;
     [SerializeField] int startEggCount;
     [SerializeField] int c12count;
-    public float health = 50f;
+    public float health = 0f;
     private int eggCount = 3;
-    private int boomEggCount = 1;
+    private int boomEggCount = 0;
+    private int goldenEggs = 0;
     //private List<GameObject> inventory;
     private AudioManager am;
     public bool isElectrocuted = false;
@@ -41,7 +42,7 @@ public class PlayerStats : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         //Debug.Log("Hit: " +  collision.gameObject.name);
-        if(collision.gameObject.tag == "eggCollectable")  // inrease egg count when player collides with a collectable egg. 
+        if(collision.gameObject.tag == "GoldenEgg")  // inrease egg count when player collides with a collectable egg. 
         {
             am.PlaySound("EggPickUp");
             eggCount++;
