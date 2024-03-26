@@ -29590,7 +29590,7 @@ PrefabInstance:
       objectReference: {fileID: 1450634992}
     - target: {fileID: 2330195591798394025, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: startHealth
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2330195591798394025, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: isElectrocuted
@@ -29688,7 +29688,7 @@ PrefabInstance:
       addedObject: {fileID: 1062302603}
     - targetCorrespondingSourceObject: {fileID: 4183131020616776712, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1062302602}
+      addedObject: {fileID: 1062302612}
   m_SourcePrefab: {fileID: 100100000, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
 --- !u!4 &1062302584 stripped
 Transform:
@@ -29716,7 +29716,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1062302602
+--- !u!114 &1062302603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789530749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6df31bbd67a942d41bb9292c2ee77724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1062302612
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29737,20 +29749,6 @@ MonoBehaviour:
   - {fileID: 1689530456}
   - {fileID: 97939047}
   playerHealth: {fileID: 0}
---- !u!114 &1062302603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789530749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6df31bbd67a942d41bb9292c2ee77724, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 5
-  healthText: {fileID: 0}
 --- !u!1 &1066476722
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,10 +8,10 @@ using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
 
-    [SerializeField] float startHealth;
+    [SerializeField] int startHealth;
     [SerializeField] int startEggCount;
     [SerializeField] int c12count;
-    public float health = 50f;
+    public int health = 3;
     private int eggCount = 3;
     private int boomEggCount = 0;
     private int goldenEggs = 0;
@@ -29,7 +29,7 @@ public class PlayerStats : MonoBehaviour
     }
 
 
-    public void InflictDamage(float damage)  // damage the player. 
+    public void InflictDamage(int damage)  // damage the player. 
     {
         health -= damage;
         if (health <= 0)

@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class HealthDisplay : MonoBehaviour
 {
-    public int health;
-    public int maxHealth;
+    public int health = 3;
+    public int maxHealth = 3;
 
     public Sprite emptyHeart;
     public Sprite fullHeart;
@@ -19,12 +19,13 @@ public class HealthDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
     void Update()
     {
+        health = playerHealth.health;
       
         for (int i = 0; i < hearts.Length; i++)
         {

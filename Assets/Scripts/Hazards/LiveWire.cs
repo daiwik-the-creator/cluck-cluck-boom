@@ -7,7 +7,7 @@ public class LiveWire : MonoBehaviour
 {
     Color c;
     public bool isLive = false;
-    public float damage = 1f;
+    public int damage = 1;
     
     // Start is called before the first frame update
     void Start()
