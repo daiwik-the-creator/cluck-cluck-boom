@@ -17,4 +17,9 @@ public class ElevatorLoader : MonoBehaviour
             
         }
     }
+
+    public int getRequiredGoldenEggs()
+    {
+        return GoldenEggsRequired;
+    }
 }

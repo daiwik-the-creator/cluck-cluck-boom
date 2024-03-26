@@ -7,8 +7,9 @@ public class goldenEggCounter : MonoBehaviour
 {
     public TextMeshProUGUI mytxt;
     public PlayerStats player;
+    public ElevatorLoader myEle;
     void Update()
     {
-        mytxt.text = "G_Eggs:" + player.getGoldenEggCount() + "/3";
+        mytxt.text = "G_Eggs:" + player.getGoldenEggCount() + "/"  + myEle.getRequiredGoldenEggs();
     }
 }
