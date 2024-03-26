@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class HealthDisplay : MonoBehaviour
 {
-    public int health = 3;
-    public int maxHealth = 3;
+    public int health;
+    public int maxHealth;
 
     public Sprite emptyHeart;
     public Sprite fullHeart;
@@ -19,14 +19,13 @@ public class HealthDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        health = playerHealth.health;
-      
+
         for (int i = 0; i < hearts.Length; i++)
         {
             if (i < health)
@@ -34,11 +33,11 @@ public class HealthDisplay : MonoBehaviour
                 hearts[i].sprite = fullHeart;
 
             }
-            else 
+            else
             {
                 hearts[i].sprite = emptyHeart;
             }
-            if(i < maxHealth)
+            if (i < maxHealth)
             {
                 hearts[i].enabled = true;
             }
