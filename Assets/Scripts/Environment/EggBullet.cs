@@ -37,6 +37,7 @@ public class EggBullet : MonoBehaviour
 
         if(collision.tag != "Player" && collision.tag != "Room" )
         {
+            FindObjectOfType<AudioManager>().PlaySound("eggBreak");
             Destroy(gameObject.GetComponent<Rigidbody2D>());
             gameObject.GetComponent<SpriteRenderer>().sprite = brokenEgg;
             Destroy(gameObject,3.0f);

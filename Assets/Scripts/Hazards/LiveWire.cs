@@ -24,6 +24,7 @@ public class LiveWire : MonoBehaviour
         if (isLive)
         {
             /*gameObject.GetComponent<SpriteRenderer>().color = Color.blue;*/
+            FindObjectOfType<AudioManager>().PlayLiveWire();
             gameObject.GetComponent<SpriteRenderer>().color = c;
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
 
@@ -44,6 +45,7 @@ public class LiveWire : MonoBehaviour
             if (other.gameObject.CompareTag("Player") && other.GetComponent<PlayerStats>().isElectrocuted == false)
             {
                 // Fix for multiple electrocutions.
+                
                 other.GetComponent<PlayerStats>().isElectrocuted = true;
                 StartCoroutine(ElectrocutePlayer(other));
             }
@@ -66,6 +68,7 @@ public class LiveWire : MonoBehaviour
             yield return null;
         }
         player.GetComponent<PlayerStats>().InflictDamage(damage);
+        FindObjectOfType<AudioManager>().PlaySound("hurt");
         player.GetComponent<PlayerStats>().isElectrocuted = false;
 
     }

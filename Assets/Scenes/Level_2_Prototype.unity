@@ -15810,11 +15810,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.62
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.62
+      value: -3.54
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15876,6 +15876,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4183131020616776712, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2069837273}
+    - targetCorrespondingSourceObject: {fileID: 4183131020616776712, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2069837282}
   m_SourcePrefab: {fileID: 100100000, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
 --- !u!1001 &874276674
 PrefabInstance:
@@ -91380,6 +91383,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 6.32
       objectReference: {fileID: 0}
+    - target: {fileID: 3280664246437561736, guid: 785274d5979fafc478d6c68b43c1d45e, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3484046712408116948, guid: 785274d5979fafc478d6c68b43c1d45e, type: 3}
       propertyPath: upspeed
       value: 2
@@ -92837,6 +92844,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 9025933053565836606, guid: ac92309b02d83f3449a58643bd9af845, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ff1d9d8825ab45f44b124d5f631099e5, type: 3}
     - target: {fileID: 9025933053565836606, guid: ac92309b02d83f3449a58643bd9af845, type: 3}
       propertyPath: sounds.Array.data[6].name
       value: EggPickUp
@@ -94380,6 +94391,14 @@ CapsuleCollider2D:
   m_Offset: {x: -0.07612824, y: -0.058388315}
   m_Size: {x: 0.7534426, y: 0.7534426}
   m_Direction: 0
+--- !u!81 &2069837282
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069837264}
+  m_Enabled: 0
 --- !u!1001 &2084651122
 PrefabInstance:
   m_ObjectHideFlags: 0

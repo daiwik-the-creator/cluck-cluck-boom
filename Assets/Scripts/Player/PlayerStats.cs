@@ -31,6 +31,7 @@ public class PlayerStats : MonoBehaviour
 
     public void InflictDamage(int damage)  // damage the player. 
     {
+        am.PlaySound("hurt");
         health -= damage;
         if (health <= 0)
         {
