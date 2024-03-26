@@ -29530,8 +29530,7 @@ Transform:
   m_LocalPosition: {x: 20.2415, y: 2.8107, z: 3.2770894}
   m_LocalScale: {x: 0.5298239, y: 0.6850579, z: 0.762556}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1129564615}
+  m_Children: []
   m_Father: {fileID: 1398017918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &917089151
@@ -29620,6 +29619,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upspeed: 8
   downspeed: 12
+  crusher: {fileID: 0}
+  playerCrushed: {fileID: 0}
 --- !u!1001 &956604579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30154,6 +30155,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4183131020616776712, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1062302605}
+    - targetCorrespondingSourceObject: {fileID: 4183131020616776712, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1062302612}
   m_SourcePrefab: {fileID: 100100000, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
 --- !u!4 &1062302584 stripped
 Transform:
@@ -30204,6 +30208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a3e304a88367d4a9db133e9c841904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button1: {fileID: 0}
+  button2: {fileID: 0}
+  button3: {fileID: 0}
 --- !u!114 &1062302612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30214,26 +30221,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a5273a1a3ede574092766d1811675fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  maxHealth: 3
-  emptyHeart: {fileID: 21300000, guid: c0519156026b6124f9e055afb937c019, type: 3}
-  fullHeart: {fileID: 21300000, guid: abd00149b2cd3a64bb0d9e60d8705a4c, type: 3}
-  hearts:
-  - {fileID: 608405487}
-  - {fileID: 1689530456}
-  - {fileID: 97939047}
-  playerHealth: {fileID: 1062302614}
---- !u!114 &1062302614 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2330195591798394025, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
-  m_PrefabInstance: {fileID: 1062302583}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789530749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b1dc6d0c62eeb347b645cf8b9ae94d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1066476722
@@ -43003,6 +42990,7 @@ Transform:
   - {fileID: 543214368}
   - {fileID: 644624611}
   - {fileID: 1477114988}
+  - {fileID: 917089148}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1413723575 stripped
@@ -44140,7 +44128,7 @@ GameObject:
   - component: {fileID: 1657800442}
   - component: {fileID: 1657800441}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Game overCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44823,7 +44811,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 576135684728447663, guid: 6d14738b2bdd6e947be6a2252c002970, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: Pause menuCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 1629791801279464235, guid: 6d14738b2bdd6e947be6a2252c002970, type: 3}
       propertyPath: m_SizeDelta.x
