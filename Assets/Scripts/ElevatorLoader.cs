@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ElevatorLoader : MonoBehaviour
 {
-    private int goldeneggCcount = 0;
+    //private int goldeneggCcount = 0;
     [SerializeField] private int GoldenEggsRequired; 
     private void OnTriggerEnter2D(Collider2D col)
     {
