@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
         // Double Jump
         else if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
-            am.PlaySound("DoubleJump" );
+            am.PlaySound("DoubleJump");
             myRb.velocity = new Vector2(myRb.velocity.x, 16f);
             canJump = false;
         }
@@ -114,8 +114,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && !IsGrounded() && myRb.velocity.y < 0f)
         {
             //Debug.Log("Trying to play glide");
-           
-               
             glideSource.Play();
             myRb.gravityScale = 0.5f;
         }
