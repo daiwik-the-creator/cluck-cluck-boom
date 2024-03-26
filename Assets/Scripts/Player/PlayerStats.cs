@@ -11,7 +11,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] float startHealth;
     [SerializeField] int startEggCount;
     [SerializeField] int c12count;
-    public float health = 0f;
+    public float health = 50f;
     private int eggCount = 3;
     private int boomEggCount = 0;
     private int goldenEggs = 0;
@@ -36,7 +36,6 @@ public class PlayerStats : MonoBehaviour
         {
             Debug.Log("lmaoded");
             respawn.GetComponent<Respawn>().Spawn();
-            health = startHealth;
         }
     }
 

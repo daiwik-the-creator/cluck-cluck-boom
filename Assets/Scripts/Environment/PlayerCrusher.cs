@@ -54,11 +54,11 @@ public class CrushingPlatform : MonoBehaviour
         }
     }
 
-    IEnumerator CrushPlayer(Collider2D playerCollider)
+    IEnumerator CrushPlayer(Collider2D player)
     {
-/*        playerCollider.GetComponent<> = false;*/
-        yield return new WaitForSeconds(0.5f);
-        playerCollider.GetComponent<PlayerStats>().InflictDamage(5);
-/*        playerCollider.enabled = true;*/
+        player.enabled = false;
+        yield return new WaitForSeconds(.5f);
+        player.GetComponent<PlayerStats>().InflictDamage(5);
+        player.enabled = true;
     }
 }

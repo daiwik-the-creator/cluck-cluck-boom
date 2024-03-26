@@ -11,7 +11,6 @@ public class PressurePlate : MonoBehaviour
 
     [SerializeField] bool isReversed = false;
     [SerializeField] bool isPressed = false;
-    private bool collisionStayed = false;
 
     private void Start()
     {
@@ -20,7 +19,7 @@ public class PressurePlate : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)   // Turn on Pressure plate 
     {
-        if ((collision.gameObject.tag == "Player" || collision.gameObject.tag == "Peckable") && isPressed == false);
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Peckable") 
         {
             isPressed = true;
             buttonAction(isPressed);
@@ -28,18 +27,9 @@ public class PressurePlate : MonoBehaviour
 
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if ((collision.gameObject.tag == "Player" || collision.gameObject.tag == "Peckable"))
-        {
-            isPressed = true;
-            buttonAction(isPressed);
-        }
-    }
-
     private void OnCollisionExit2D(Collision2D collision)  // Turn Pressure plate off
     {
-        if ((collision.gameObject.tag == "Player" || collision.gameObject.tag == "Peckable") && isPressed == true)
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Peckable")
         {
 
             isPressed = false;
