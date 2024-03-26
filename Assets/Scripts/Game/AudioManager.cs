@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log("ERROR: Name not found");
         }
-        if(s != null)   
+        if(s!= null)   
             s.source.Play();
         /*return s;*/
     }
