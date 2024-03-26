@@ -2218,10 +2218,6 @@ PrefabInstance:
       propertyPath: m_Priority
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 963063084721605359, guid: fbbfef1d1ec05d54d990cf0cc0611efb, type: 3}
-      propertyPath: m_Lens.OrthographicSize
-      value: 6.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2457366737201281169, guid: fbbfef1d1ec05d54d990cf0cc0611efb, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 10
@@ -83751,20 +83747,12 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 9025933053565836606, guid: ac92309b02d83f3449a58643bd9af845, type: 3}
-      propertyPath: sounds.Array.data[0].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: ff1d9d8825ab45f44b124d5f631099e5, type: 3}
-    - target: {fileID: 9025933053565836606, guid: ac92309b02d83f3449a58643bd9af845, type: 3}
       propertyPath: sounds.Array.data[6].name
       value: EggPickUp
       objectReference: {fileID: 0}
     - target: {fileID: 9025933053565836606, guid: ac92309b02d83f3449a58643bd9af845, type: 3}
       propertyPath: sounds.Array.data[2].pitch
       value: 0.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 9025933053565836606, guid: ac92309b02d83f3449a58643bd9af845, type: 3}
-      propertyPath: sounds.Array.data[0].volume
-      value: 4.87
       objectReference: {fileID: 0}
     - target: {fileID: 9025933053565836606, guid: ac92309b02d83f3449a58643bd9af845, type: 3}
       propertyPath: sounds.Array.data[2].volume
