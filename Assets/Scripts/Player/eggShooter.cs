@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class eggShooter : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class eggShooter : MonoBehaviour
     public GameObject egg;
     public GameObject explodingEgg;
     public Transform shootingPoint;
+    private Animator _animator;
 
     private String curEgg = "Egg";
     //private PlayerStats playerStats;
@@ -21,6 +23,7 @@ public class eggShooter : MonoBehaviour
     {
         player = GetComponent<PlayerMovement>();
         StartCoroutine(IncreaseEgg());
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,6 +37,7 @@ public class eggShooter : MonoBehaviour
                 FindObjectOfType<AudioManager>().PlaySound("eggThrow");
                 Instantiate(egg, shootingPoint.position, transform.rotation);
                 gameObject.GetComponent<PlayerStats>().EggShot();
+                _animator.SetBool(name: "Shooting", value: true);
             }
 
             // shoot c12
@@ -43,6 +47,7 @@ public class eggShooter : MonoBehaviour
                 FindObjectOfType<AudioManager>().PlaySound("c12Throw");
                 Instantiate(explodingEgg, shootingPoint.position, transform.rotation);
                 gameObject.GetComponent<PlayerStats>().ExploEggShot();
+                _animator.SetBool(name: "Shooting", value: true);
             }
 
         }
@@ -56,12 +61,9 @@ public class eggShooter : MonoBehaviour
         {
             curEgg = "Bomb";
         }
+        
+    }
 
-        
-        
-        
-   }  
-    
     // making the no. of eggs unlimited and giving it a cooldown. 
     IEnumerator IncreaseEgg()
     {

@@ -56,9 +56,9 @@ public class CrushingPlatform : MonoBehaviour
 
     IEnumerator CrushPlayer(Collider2D player)
     {
-        player.enabled = false;
+/*        player.enabled = false;*/
         yield return new WaitForSeconds(.5f);
         player.GetComponent<PlayerStats>().InflictDamage(5);
-        player.enabled = true;
+/*        player.enabled = true;*/
     }
 }

@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private bool isFacingRight = true;
     private bool canJump = true;
+    private Animator _animator;
     
     [SerializeField] private float playerSpeed = 8f;
     [SerializeField] private float jumpForce = 16f;
@@ -30,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         myRb = GetComponent<Rigidbody2D>();
         walkSource = am.getSource("Walk");
         glideSource = am.getSource("Glide");
-
+        _animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -57,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //Debug.Log("I am grounded!!!!!");
             canJump = true;
+            _animator.SetBool(name: "Shooting", value: false); // temp shoot anim break
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -64,7 +66,9 @@ public class PlayerMovement : MonoBehaviour
             ResetScene();
         }
 
-
+        _animator.SetBool(name: "IsInAir", value: !IsGrounded());
+        _animator.SetBool(name: "IsWalking", value: horizontal != 0);
+        /*Debug.Log(IsGrounded());*/
     }
 
     private void ResetScene()
@@ -84,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, myRb.transform.localScale.y + 0.1f, layer);
             if (hit.collider!=null) return true;
+            //Debug.Log("hit: "+hit.collider.name);
         }
         return false;
     }
@@ -105,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
         // Double Jump
         else if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
-            am.PlaySound("DoubleJump" );
+            am.PlaySound("DoubleJump");
             myRb.velocity = new Vector2(myRb.velocity.x, 16f);
             canJump = false;
         }
@@ -114,8 +119,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && !IsGrounded() && myRb.velocity.y < 0f)
         {
             //Debug.Log("Trying to play glide");
-           
-               
             glideSource.Play();
             myRb.gravityScale = 0.5f;
         }
