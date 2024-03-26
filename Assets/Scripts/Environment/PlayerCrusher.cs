@@ -10,6 +10,8 @@ public class CrushingPlatform : MonoBehaviour
     public float downspeed;
     private bool chop;
     private Vector3 up, down;
+    [SerializeField] AudioSource crusher;
+    [SerializeField] AudioSource playerCrushed;
 
     void Start()
     {
@@ -27,6 +29,7 @@ public class CrushingPlatform : MonoBehaviour
 
         if (transform.position.y <= down.y)
         {
+            crusher.Play();
             chop = false;
         }
         if (chop)
@@ -35,6 +38,7 @@ public class CrushingPlatform : MonoBehaviour
         }
         else
         {
+
             transform.position = Vector2.MoveTowards(transform.position, up, upspeed * Time.deltaTime);
         }
 
@@ -56,9 +60,10 @@ public class CrushingPlatform : MonoBehaviour
 
     IEnumerator CrushPlayer(Collider2D player)
     {
-/*        player.enabled = false;*/
+        /*        player.enabled = false;*/
+        playerCrushed.Play();
         yield return new WaitForSeconds(.5f);
         player.GetComponent<PlayerStats>().InflictDamage(5);
-/*        player.enabled = true;*/
+        /*        player.enabled = true;*/ 
     }
 }

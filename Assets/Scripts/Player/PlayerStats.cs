@@ -31,6 +31,7 @@ public class PlayerStats : MonoBehaviour
 
     public void InflictDamage(int damage)  // damage the player. 
     {
+        am.PlaySound("hurt");
         health -= damage;
         if (health <= 0)
         {
@@ -45,7 +46,7 @@ public class PlayerStats : MonoBehaviour
         if(collision.gameObject.tag == "GoldenEgg")  // inrease egg count when player collides with a collectable egg. 
         {
             am.PlaySound("EggPickUp");
-            eggCount++;
+            goldenEggs++;
             Destroy(collision.gameObject);
         }
 
@@ -88,5 +89,9 @@ public class PlayerStats : MonoBehaviour
         eggCount++;
     }
 
+    public int getGoldenEggCount()
+    {
+        return goldenEggs; 
+    }
     
 }

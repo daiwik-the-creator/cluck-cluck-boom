@@ -81,6 +81,12 @@ MonoBehaviour:
     pitch: 0.43
     isLooped: 0
     source: {fileID: 0}
+  - name: hurt
+    clip: {fileID: 8300000, guid: 81f171611d04288478c24c8f9d68a43d, type: 3}
+    volume: 5.67
+    pitch: 1
+    isLooped: 0
+    source: {fileID: 0}
   - name: EggPickUp
     clip: {fileID: 8300000, guid: 1364464857aee9d47b98769038dfa693, type: 3}
     volume: 1.96
@@ -107,6 +113,18 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: c12Throw
     clip: {fileID: 8300000, guid: 51bf01b8cb279c547877668a80e4c984, type: 3}
+    volume: 5.67
+    pitch: 1
+    isLooped: 0
+    source: {fileID: 0}
+  - name: eggBreak
+    clip: {fileID: 8300000, guid: 3b5f116af4f55c44f95de5131b3f4a6f, type: 3}
+    volume: 5.67
+    pitch: 1
+    isLooped: 0
+    source: {fileID: 0}
+  - name: liveWires
+    clip: {fileID: 8300000, guid: 0fcda5a119657c84f8a6187a75c8ea4c, type: 3}
     volume: 5.67
     pitch: 1
     isLooped: 0

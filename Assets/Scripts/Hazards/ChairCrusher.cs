@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChairCrusher : MonoBehaviour
 {
+    [SerializeField] AudioSource crush;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,10 +30,12 @@ public class ChairCrusher : MonoBehaviour
 
     IEnumerator CrushChair(int delay, Collider2D chair)
     {
+        crush.Play();
         yield return new WaitForSeconds(delay);
         transform.GetComponent<SpriteRenderer>().enabled = true;
         chair.GetComponent<chairSpawnnner>().resetPos();
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        crush.Play();
     }
 
 }

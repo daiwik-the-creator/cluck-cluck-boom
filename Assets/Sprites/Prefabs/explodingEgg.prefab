@@ -164,3 +164,4 @@ MonoBehaviour:
   BulletSpeed: 2
   BlastRadius: 5
   ExplosionForce: 2.43
+  seeRadius: 1
