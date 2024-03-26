@@ -35,6 +35,7 @@ public class PlayerStats : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            health = 3;
             Debug.Log("lmaoded");
             respawn.GetComponent<Respawn>().Spawn();
         }
