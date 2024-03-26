@@ -47,14 +47,14 @@ public class PlayerStats : MonoBehaviour
         if(collision.gameObject.tag == "GoldenEgg")  // inrease egg count when player collides with a collectable egg. 
         {
             am.PlaySound("EggPickUp");
-            goldenEggs++;
+            goldenEggs+=1;
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "C12")  // inrease egg count when player collides with a collectable egg. 
         {
             am.PlaySound("c12PickUp");
-            boomEggCount++;
+            boomEggCount+=3;
             Destroy(collision.gameObject);
         }
 
