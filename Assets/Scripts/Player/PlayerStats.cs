@@ -36,6 +36,7 @@ public class PlayerStats : MonoBehaviour
         {
             Debug.Log("lmaoded");
             respawn.GetComponent<Respawn>().Spawn();
+            health = startHealth;
         }
     }
 
