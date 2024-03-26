@@ -17230,11 +17230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 66.5
+      value: 0.91
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.6
+      value: -4.71
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17296,9 +17296,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4183131020616776712, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2069837273}
-    - targetCorrespondingSourceObject: {fileID: 4183131020616776712, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2069837282}
   m_SourcePrefab: {fileID: 100100000, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
 --- !u!1001 &855712193
 PrefabInstance:
@@ -92350,6 +92347,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 6.32
       objectReference: {fileID: 0}
+    - target: {fileID: 3280664246437561736, guid: 785274d5979fafc478d6c68b43c1d45e, type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280664246437561736, guid: 785274d5979fafc478d6c68b43c1d45e, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280664246437561736, guid: 785274d5979fafc478d6c68b43c1d45e, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280664246437561736, guid: 785274d5979fafc478d6c68b43c1d45e, type: 3}
+      propertyPath: rolloffMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280664246437561736, guid: 785274d5979fafc478d6c68b43c1d45e, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734816872043283582, guid: 785274d5979fafc478d6c68b43c1d45e, type: 3}
       propertyPath: m_Name
       value: PlayerCrusher
@@ -94748,6 +94765,10 @@ PrefabInstance:
     - target: {fileID: 9025933053565836606, guid: ac92309b02d83f3449a58643bd9af845, type: 3}
       propertyPath: sounds.Array.data[2].pitch
       value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025933053565836606, guid: ac92309b02d83f3449a58643bd9af845, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 9025933053565836606, guid: ac92309b02d83f3449a58643bd9af845, type: 3}
       propertyPath: sounds.Array.data[2].volume

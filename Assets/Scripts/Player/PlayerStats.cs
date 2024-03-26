@@ -89,5 +89,9 @@ public class PlayerStats : MonoBehaviour
         eggCount++;
     }
 
+    public int getGoldenEggCount()
+    {
+        return goldenEggs; 
+    }
     
 }

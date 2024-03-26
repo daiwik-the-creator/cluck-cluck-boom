@@ -29,7 +29,7 @@ public class CrushingPlatform : MonoBehaviour
 
         if (transform.position.y <= down.y)
         {
-            crusher.Play();   
+            crusher.Play();
             chop = false;
         }
         if (chop)
@@ -38,6 +38,7 @@ public class CrushingPlatform : MonoBehaviour
         }
         else
         {
+
             transform.position = Vector2.MoveTowards(transform.position, up, upspeed * Time.deltaTime);
         }
 
