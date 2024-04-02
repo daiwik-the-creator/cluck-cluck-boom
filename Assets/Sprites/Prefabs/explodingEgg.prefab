@@ -162,6 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletSpeed: 2
-  BlastRadius: 5
+  BlastRadius: 4
   ExplosionForce: 2.43
-  seeRadius: 1
+  seeRadius: 0
