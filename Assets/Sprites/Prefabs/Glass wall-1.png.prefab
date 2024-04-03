@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6098572389743518922}
   - component: {fileID: 8203103225396922789}
   - component: {fileID: 3069809097799764529}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Glass wall-1.png
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 957511442598255585}
   - component: {fileID: 148712846775709768}
   - component: {fileID: 7810797543125394191}
+  - component: {fileID: 5234206535835434404}
   m_Layer: 0
   m_Name: Live-Wire
   m_TagString: Untagged
@@ -130,3 +131,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &5234206535835434404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8115987887081562217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a33a19ab68ee8b4eba36804446a85f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLive: 0
+  damage: 1

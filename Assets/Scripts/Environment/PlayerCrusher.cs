@@ -66,4 +66,6 @@ public class CrushingPlatform : MonoBehaviour
         player.GetComponent<PlayerStats>().InflictDamage(5);
         /*        player.enabled = true;*/ 
     }
+
+   
 }
