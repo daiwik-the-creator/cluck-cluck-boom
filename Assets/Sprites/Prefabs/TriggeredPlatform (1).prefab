@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1060850747308115187}
   - component: {fileID: 7988944490462775982}
   - component: {fileID: 2132858983122060589}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TriggeredPlatform (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8698979206687437854}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
