@@ -92778,6 +92778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCrusher
       objectReference: {fileID: 0}
+    - target: {fileID: 6942224098322986659, guid: 785274d5979fafc478d6c68b43c1d45e, type: 3}
+      propertyPath: m_Simulated
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8268483927831027877, guid: 785274d5979fafc478d6c68b43c1d45e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -70.60787
