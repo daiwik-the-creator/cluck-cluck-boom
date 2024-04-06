@@ -19,7 +19,7 @@ public class Respawn : MonoBehaviour
             RespawnPoints.Add(transform.GetChild(i).position);
             transform.GetChild(i).GetComponent<SpriteRenderer>().enabled = false;
         }
-        Debug.Log(RespawnPoints.Count);
+        /*Debug.Log(RespawnPoints.Count);*/
     }
 
     public void Spawn()

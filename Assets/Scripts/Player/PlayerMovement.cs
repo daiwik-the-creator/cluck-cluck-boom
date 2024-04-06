@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using Unity.VisualScripting;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -10,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private bool isFacingRight = true;
     private bool canJump = true;
+    public bool isStealthing = false;
     private Animator _animator;
     
     [SerializeField] private float playerSpeed = 8f;
@@ -36,23 +38,34 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        myRb.velocity = new Vector2(horizontal * playerSpeed, myRb.velocity.y);
-       
-        Jump();
-        Flip();
-        CineCam();
-
-        if (IsGrounded() && horizontal != 0 )
+        Stealth();
+        if (isStealthing == false)
         {
-            if (!walkSource.isPlaying)
+            horizontal = Input.GetAxisRaw("Horizontal");
+            myRb.velocity = new Vector2(horizontal * playerSpeed, myRb.velocity.y);
+            Jump();
+            Flip();
+
+            if (IsGrounded() && horizontal != 0)
             {
-                //Debug.Log("Playing walk.");
-                am.PlaySound("Walk");
+                if (!walkSource.isPlaying)
+                {
+                    am.PlaySound("Walk");
+                }
             }
-           
-          
+
+            _animator.SetBool(name: "IsInAir", value: !IsGrounded());
+            _animator.SetBool(name: "IsWalking", value: horizontal != 0);
+
+        } else
+        {
+            _animator.SetBool(name: "IsWalking", value: false);
+            _animator.SetBool(name: "IsInAir", value: !IsGrounded());
+            glideSource.Stop();
+
         }
+
+        CineCam();
  
         if (IsGrounded())
         {
@@ -66,8 +79,6 @@ public class PlayerMovement : MonoBehaviour
             ResetScene();
         }
 
-        _animator.SetBool(name: "IsInAir", value: !IsGrounded());
-        _animator.SetBool(name: "IsWalking", value: horizontal != 0);
         /*Debug.Log(IsGrounded());*/
     }
 
@@ -86,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
     {
         foreach (var layer in GroundLayers)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, myRb.transform.localScale.y + 0.1f, layer);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, myRb.transform.localScale.y - 0.2f, layer);
             if (hit.collider!=null) return true;
             //Debug.Log("hit: "+hit.collider.name);
         }
@@ -167,6 +178,30 @@ public class PlayerMovement : MonoBehaviour
             transposer.m_YDamping -= 0.1f;
         }
 
+    }
+
+    public void Stealth()
+    {
+        if (Input.GetKey(KeyCode.X) && IsGrounded())
+        {
+            isStealthing = true;
+            _animator.SetBool(name: "IsStealthing", value: isStealthing);
+            SetOpacity(.5f);
+        }
+        else
+        {
+            isStealthing = false;
+            _animator.SetBool(name: "IsStealthing", value: isStealthing);
+            SetOpacity(1f);
+        }
+    }
+
+    public void SetOpacity(float opacity)
+    {
+        opacity = Mathf.Clamp01(opacity);
+        Color spriteColor = myRb.GetComponent<SpriteRenderer>().color;
+        spriteColor.a = opacity;
+        myRb.GetComponent<SpriteRenderer>().color = spriteColor;
     }
 
 }
