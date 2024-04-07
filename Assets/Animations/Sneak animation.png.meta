@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5053ff9995c2f53478ebdac128b0b958
+guid: 0e4afad4bc0dd2744928f4b078089817
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,70 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1920
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e22ef507a9de51348853c0ad04d67165
-      internalID: -660677500
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_1
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 1920
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb1a44f55c903ab41bb5593fe035481c
-      internalID: -993079120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_2
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 1920
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe29d9d28f37994409cca97befa32ce1
-      internalID: 1897780029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_3
+      name: Sneak animation_0
       rect:
         serializedVersion: 2
         x: 0
@@ -187,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0da7c4ed2c105a74ca7d9844ac56a50f
-      internalID: -1905250556
+      spriteID: 1a67d05e46af75c429b3c53880655325
+      internalID: 1496059251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_4
+      name: Sneak animation_1
       rect:
         serializedVersion: 2
         x: 640
@@ -208,35 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ee1491ec910f7d4db807aa8b0291d32
-      internalID: 255495519
+      spriteID: 61ce2ff7ed258cd4fbac0218fa5c2640
+      internalID: 25035356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_5
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 1280
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e813267cd59461a4c98e03fdcc638843
-      internalID: 1955110299
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_6
+      name: Sneak animation_2
       rect:
         serializedVersion: 2
         x: 0
@@ -250,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cb314bde6255e64e9a251fb4c7ebbe7
-      internalID: 1068237633
+      spriteID: ee939a711f4ac06418cbe6fc10354f2b
+      internalID: 457207667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_7
+      name: Sneak animation_3
       rect:
         serializedVersion: 2
         x: 640
@@ -271,35 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fcb79bbac4dff842ad6341d59e62846
-      internalID: -1346983055
+      spriteID: e99d63530691e74469eaf9c06d3ce82c
+      internalID: 1930325902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_8
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 640
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a27295f21ffc38408f2d0e10e5515c2
-      internalID: 732598626
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_9
+      name: Sneak animation_4
       rect:
         serializedVersion: 2
         x: 0
@@ -313,50 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c5c1b9b05b45694984e7c62c53bf9d6
-      internalID: -462329876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_10
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc5762304f63bc6429f01d8d311bb69a
-      internalID: 1227597308
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_11
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 0
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e9b5991f3c752c49a180e27c61aa3ae
-      internalID: 1754374792
+      spriteID: d1cb625b248985244b84fa78941b34d8
+      internalID: 1623152646
       vertices: []
       indices: 
       edges: []
@@ -372,18 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Buckly_Barnhead-SpriteSheet_0: -660677500
-      Buckly_Barnhead-SpriteSheet_1: -993079120
-      Buckly_Barnhead-SpriteSheet_10: 1227597308
-      Buckly_Barnhead-SpriteSheet_11: 1754374792
-      Buckly_Barnhead-SpriteSheet_2: 1897780029
-      Buckly_Barnhead-SpriteSheet_3: -1905250556
-      Buckly_Barnhead-SpriteSheet_4: 255495519
-      Buckly_Barnhead-SpriteSheet_5: 1955110299
-      Buckly_Barnhead-SpriteSheet_6: 1068237633
-      Buckly_Barnhead-SpriteSheet_7: -1346983055
-      Buckly_Barnhead-SpriteSheet_8: 732598626
-      Buckly_Barnhead-SpriteSheet_9: -462329876
+      Sneak animation_0: 1496059251
+      Sneak animation_1: 25035356
+      Sneak animation_2: 457207667
+      Sneak animation_3: 1930325902
+      Sneak animation_4: 1623152646
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

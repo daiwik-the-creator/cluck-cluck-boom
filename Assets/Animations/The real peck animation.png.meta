@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5053ff9995c2f53478ebdac128b0b958
+guid: f02c6d1cd73925141b6b611f9c3b792f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,70 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1920
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e22ef507a9de51348853c0ad04d67165
-      internalID: -660677500
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_1
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 1920
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb1a44f55c903ab41bb5593fe035481c
-      internalID: -993079120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_2
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 1920
-        width: 640
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe29d9d28f37994409cca97befa32ce1
-      internalID: 1897780029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_3
+      name: The real peck animation_0
       rect:
         serializedVersion: 2
         x: 0
@@ -187,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0da7c4ed2c105a74ca7d9844ac56a50f
-      internalID: -1905250556
+      spriteID: 9f345f97b48bbce4cbf93815084b34bb
+      internalID: -2071917150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_4
+      name: The real peck animation_1
       rect:
         serializedVersion: 2
         x: 640
@@ -208,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ee1491ec910f7d4db807aa8b0291d32
-      internalID: 255495519
+      spriteID: e0038206fb0f3094bb892e339c527ffb
+      internalID: 463602495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_5
+      name: The real peck animation_2
       rect:
         serializedVersion: 2
         x: 1280
@@ -229,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e813267cd59461a4c98e03fdcc638843
-      internalID: 1955110299
+      spriteID: 4ab03c8823204ce4b865d0369ef02d40
+      internalID: 1097319688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_6
+      name: The real peck animation_3
       rect:
         serializedVersion: 2
         x: 0
@@ -250,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cb314bde6255e64e9a251fb4c7ebbe7
-      internalID: 1068237633
+      spriteID: 91a7c565dd2fce141b6bc4e177d00682
+      internalID: 1065622530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_7
+      name: The real peck animation_4
       rect:
         serializedVersion: 2
         x: 640
@@ -271,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fcb79bbac4dff842ad6341d59e62846
-      internalID: -1346983055
+      spriteID: 88394767e95280d4c9a73bbe4b0ca894
+      internalID: 740654926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_8
+      name: The real peck animation_5
       rect:
         serializedVersion: 2
         x: 1280
@@ -292,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a27295f21ffc38408f2d0e10e5515c2
-      internalID: 732598626
+      spriteID: 64a28b49fce9be74b988e4ec33429f33
+      internalID: 1855206765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_9
+      name: The real peck animation_6
       rect:
         serializedVersion: 2
         x: 0
@@ -313,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c5c1b9b05b45694984e7c62c53bf9d6
-      internalID: -462329876
+      spriteID: b5dd1800994f4dd4cba01875aca15583
+      internalID: -1797391104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_10
+      name: The real peck animation_7
       rect:
         serializedVersion: 2
         x: 640
@@ -334,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc5762304f63bc6429f01d8d311bb69a
-      internalID: 1227597308
+      spriteID: e00a90f8e1fb0614695be93009df29cd
+      internalID: -351717354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buckly_Barnhead-SpriteSheet_11
+      name: The real peck animation_8
       rect:
         serializedVersion: 2
         x: 1280
@@ -355,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e9b5991f3c752c49a180e27c61aa3ae
-      internalID: 1754374792
+      spriteID: 8eff7c2d096ef9b4ead20682ee36cf90
+      internalID: 1452102448
       vertices: []
       indices: 
       edges: []
@@ -372,18 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Buckly_Barnhead-SpriteSheet_0: -660677500
-      Buckly_Barnhead-SpriteSheet_1: -993079120
-      Buckly_Barnhead-SpriteSheet_10: 1227597308
-      Buckly_Barnhead-SpriteSheet_11: 1754374792
-      Buckly_Barnhead-SpriteSheet_2: 1897780029
-      Buckly_Barnhead-SpriteSheet_3: -1905250556
-      Buckly_Barnhead-SpriteSheet_4: 255495519
-      Buckly_Barnhead-SpriteSheet_5: 1955110299
-      Buckly_Barnhead-SpriteSheet_6: 1068237633
-      Buckly_Barnhead-SpriteSheet_7: -1346983055
-      Buckly_Barnhead-SpriteSheet_8: 732598626
-      Buckly_Barnhead-SpriteSheet_9: -462329876
+      The real peck animation_0: -2071917150
+      The real peck animation_1: 463602495
+      The real peck animation_2: 1097319688
+      The real peck animation_3: 1065622530
+      The real peck animation_4: 740654926
+      The real peck animation_5: 1855206765
+      The real peck animation_6: -1797391104
+      The real peck animation_7: -351717354
+      The real peck animation_8: 1452102448
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

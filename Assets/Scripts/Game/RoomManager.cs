@@ -36,7 +36,7 @@ public class RoomManager : MonoBehaviour
 
             }
 
-            Debug.Log("Entered Room: "+ currRoom.name);
+            /*Debug.Log("Entered Room: "+ currRoom.name);*/
 
         }
 

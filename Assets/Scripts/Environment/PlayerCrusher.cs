@@ -49,7 +49,7 @@ public class CrushingPlatform : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            if (collision.collider.GetComponent<PlayerMovement>().IsGrounded())
+            if (collision.collider.GetComponent<PlayerMovement>().IsGrounded() && Mathf.Abs(collision.collider.GetComponent<Rigidbody2D>().position.x - down.x) < 1.5)
             {
                 StartCoroutine(CrushPlayer(collision.collider));
                 
@@ -62,7 +62,7 @@ public class CrushingPlatform : MonoBehaviour
     {
         /*        player.enabled = false;*/
         playerCrushed.Play();
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(0f);
         player.GetComponent<PlayerStats>().InflictDamage(5);
         /*        player.enabled = true;*/ 
     }

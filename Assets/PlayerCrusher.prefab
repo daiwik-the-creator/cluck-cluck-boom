@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5484925950363692953}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: -0.022489715, y: 1.5305197, z: 0}
+  m_LocalPosition: {x: -0.022489715, y: 11.85, z: 0}
   m_LocalScale: {x: 0.18740405, y: 0.14493833, z: 0.13020834}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bb6778d84d0110345afd22108c091d24, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 3.2, y: 3.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6734816872043283582
@@ -127,7 +127,6 @@ GameObject:
   - component: {fileID: 2402179668594623884}
   - component: {fileID: 2244891703497597056}
   - component: {fileID: 5907106812418371087}
-  - component: {fileID: 6942224098322986659}
   - component: {fileID: 3484046712408116948}
   - component: {fileID: 3280664246437561736}
   - component: {fileID: 7885610148207258608}
@@ -147,8 +146,8 @@ Transform:
   m_GameObject: {fileID: 8030819340607504118}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 85.46, y: 6.59, z: 0}
-  m_LocalScale: {x: 0.7086288, y: 0.91625226, z: 1.019904}
+  m_LocalPosition: {x: 68.76, y: 4.78, z: 0}
+  m_LocalScale: {x: 0.5347449, y: 0.6914217, z: 0.76963925}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1479653662589188033}
@@ -194,7 +193,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: fb3abf37a0b639649a2a9808e740eabf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -238,7 +237,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.045621395, y: -0.057926357}
+  m_Offset: {x: 0.028488636, y: 0.010408938}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -249,35 +248,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.7536135, y: 2.1235309}
+  m_Size: {x: 6.2238226, y: 2.2761478}
   m_EdgeRadius: 0
---- !u!50 &6942224098322986659
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8030819340607504118}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
 --- !u!114 &3484046712408116948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,9 +287,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 20
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
