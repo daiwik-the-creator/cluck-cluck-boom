@@ -124,7 +124,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            glideSource.Stop();
+            if(glideSource != null) 
+                glideSource.Stop();
             myRb.gravityScale = 4f;
         }
     }

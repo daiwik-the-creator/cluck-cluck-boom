@@ -37,6 +37,10 @@ public class AudioManager : MonoBehaviour
     public AudioSource getSource(string sName)
     {
         Sound s = Array.Find(sounds, sound => sound.name == sName);
+        if (s == null)
+        {
+            Debug.Log("ERROR: Name not found");
+        }
         return s.source;
     }
 
