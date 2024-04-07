@@ -7,8 +7,10 @@ public class ScareChicken : MonoBehaviour
 {
     public GameObject scarechiken;
     public new Light2D light;
-    public new Light2D globalLight;
+    public  Light2D globalLight;
     private bool isInside = false;
+    private bool spawned = false;
+    [SerializeField] private PlayerMovement player;
 
 
     private void Update()
@@ -17,6 +19,7 @@ public class ScareChicken : MonoBehaviour
         {
             StartCoroutine(flicker(0.5f));
         }
+
             
     }
 
@@ -24,11 +27,12 @@ public class ScareChicken : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            GetComponent<AudioSource>().Play();
+            light.enabled = true;
             globalLight.intensity = 0.3f;
             isInside = true;
             Debug.Log("player entered the chat.");
-            StartCoroutine(flicker(0.5f));
-            Instantiate(scarechiken);
+            StartCoroutine(InstantiateScareChiken());
 
 
         }
@@ -38,9 +42,11 @@ public class ScareChicken : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            light.enabled=false;
             globalLight.intensity = 1;
             Debug.Log("player left the chat.");
             isInside = false;
+            spawned = false;
         }
     }
 
@@ -50,7 +56,23 @@ public class ScareChicken : MonoBehaviour
         light.intensity = 0;
         yield return new WaitForSeconds(t);
         light.intensity = 1;
-        //if( isInside ) 
-        //StartCoroutine(flicker(t));
+      
     }
+
+    IEnumerator InstantiateScareChiken()
+    {
+        
+        yield return new WaitForSeconds(3f);
+        Debug.Log("spawned scare boi");
+        if(!spawned)
+            Instantiate(scarechiken,transform.position, Quaternion.identity);
+        spawned = true;
+        isInside = false;
+        if (!player.isStealthing)
+        {
+            player.GetComponent<PlayerStats>().InflictDamage(1);
+        }
+        
+    }
+
 }

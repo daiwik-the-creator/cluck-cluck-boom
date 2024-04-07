@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8020815427299961060}
   - component: {fileID: 1997538958509610367}
+  - component: {fileID: 8862610654007952743}
   m_Layer: 0
   m_Name: scareChiken
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.97, y: 4.21, z: 0}
-  m_LocalScale: {x: 0.58458, y: 0.58458, z: 0.58458}
+  m_LocalScale: {x: 0.65174824, y: 0.65174824, z: 0.65174824}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 30df6823de914d64280b9cdb034bb7d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ff0b02ad74487f4eaf62ee36ea1f95f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8862610654007952743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6979814232629277709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 246f7156569b20f4180d2822e8cb346c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
