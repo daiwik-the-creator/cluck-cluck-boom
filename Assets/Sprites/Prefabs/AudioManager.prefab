@@ -81,6 +81,18 @@ MonoBehaviour:
     pitch: 0.43
     isLooped: 0
     source: {fileID: 0}
+  - name: stealthOn
+    clip: {fileID: 8300000, guid: f8c32d7e5e1859041a45dc89c1f60b66, type: 3}
+    volume: 5.67
+    pitch: 1
+    isLooped: 0
+    source: {fileID: 0}
+  - name: stealthOff
+    clip: {fileID: 8300000, guid: ba22cacac3c70244198d86e61ca4a815, type: 3}
+    volume: 5.67
+    pitch: 1
+    isLooped: 0
+    source: {fileID: 0}
   - name: hurt
     clip: {fileID: 8300000, guid: 81f171611d04288478c24c8f9d68a43d, type: 3}
     volume: 5.67

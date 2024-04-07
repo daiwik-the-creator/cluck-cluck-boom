@@ -12,6 +12,8 @@ public class Breakable : MonoBehaviour
 
     public int hit = 0;
     [SerializeField] private int hitThreshold;
+    [SerializeField] private bool isGlass;
+    [SerializeField] private AudioSource glassbreak;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +48,10 @@ public class Breakable : MonoBehaviour
         if (hit >= hitThreshold)
         {
             hit = 0;
-
+            if(isGlass)
+            {
+                glassbreak.Play();
+            }
             Vector2 forceToCancel = -forceDirection * force;
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
             rb.AddForce(forceToCancel, ForceMode2D.Impulse);

@@ -92257,6 +92257,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6072507734354948892, guid: c2355e940e77e0d449f964ba5127127e, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6848671958370826192, guid: c2355e940e77e0d449f964ba5127127e, type: 3}
       propertyPath: m_Name
       value: Egg_Collectable (1)
@@ -92264,6 +92268,14 @@ PrefabInstance:
     - target: {fileID: 6848671958370826192, guid: c2355e940e77e0d449f964ba5127127e, type: 3}
       propertyPath: m_TagString
       value: GoldenEgg
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086138483745846146, guid: c2355e940e77e0d449f964ba5127127e, type: 3}
+      propertyPath: TrailModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086138483745846146, guid: c2355e940e77e0d449f964ba5127127e, type: 3}
+      propertyPath: LightsModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

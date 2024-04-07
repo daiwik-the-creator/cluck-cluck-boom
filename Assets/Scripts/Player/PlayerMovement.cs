@@ -185,12 +185,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.X) && IsGrounded())
         {
+            am.PlaySound("stealthOn");
             isStealthing = true;
             _animator.SetBool(name: "IsStealthing", value: isStealthing);
             SetOpacity(.5f);
         }
         else
         {
+            am.PlaySound("stealthOff");
             isStealthing = false;
             _animator.SetBool(name: "IsStealthing", value: isStealthing);
             SetOpacity(1f);
