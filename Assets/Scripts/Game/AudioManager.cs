@@ -11,7 +11,7 @@ public class AudioManager : MonoBehaviour
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-            //s.source.loop = s.isLooped;
+            s.source.loop = s.isLooped;
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
         }

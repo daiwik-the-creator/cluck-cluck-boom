@@ -14,7 +14,7 @@ public class ElevatorLoader : MonoBehaviour
             //goldeneggCcount++;
             if(col.GetComponent<PlayerStats>().getGoldenEggCount() >= GoldenEggsRequired)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                StartCoroutine(wait(3f));
             }
             
         }
@@ -24,8 +24,10 @@ public class ElevatorLoader : MonoBehaviour
     {
         levelComplete.Play();
         yield return new WaitForSeconds(t);
-        
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+
+
     }
 
     public int getRequiredGoldenEggs()
