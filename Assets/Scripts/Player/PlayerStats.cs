@@ -14,7 +14,8 @@ public class PlayerStats : MonoBehaviour
     public int health = 3;
     private int eggCount = 3;
     private int boomEggCount = 0;
-    private int goldenEggs = 0;
+    public float goldenEggs = 0;
+    private bool collected = false; // using to fix the bug where 2 eggs are added. 
     //private List<GameObject> inventory;
     private AudioManager am;
     public bool isElectrocuted = false;
@@ -43,12 +44,15 @@ public class PlayerStats : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        
         //Debug.Log("Hit: " +  collision.gameObject.name);
         if(collision.gameObject.tag == "GoldenEgg")  // inrease egg count when player collides with a collectable egg. 
         {
             am.PlaySound("EggPickUp");
-            goldenEggs+=1;
             Destroy(collision.gameObject);
+            Debug.Log("increasign count" + collision.gameObject.name);
+            goldenEggs += 0.5f;
+              
         }
 
         if (collision.gameObject.tag == "C12")  // inrease egg count when player collides with a collectable egg. 
@@ -58,7 +62,9 @@ public class PlayerStats : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
+
     }
+
 
     public int getEggCount() // returns the egg count of the player. 
     {
@@ -90,9 +96,14 @@ public class PlayerStats : MonoBehaviour
         eggCount++;
     }
 
-    public int getGoldenEggCount()
+    public float getGoldenEggCount()
     {
         return goldenEggs; 
+    }
+
+    private void resetCollected()
+    {
+        collected = false;
     }
     
 }

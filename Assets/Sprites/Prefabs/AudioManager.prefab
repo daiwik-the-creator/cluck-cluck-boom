@@ -81,8 +81,8 @@ MonoBehaviour:
     pitch: 0.43
     isLooped: 0
     source: {fileID: 0}
-  - name: stealthOn
-    clip: {fileID: 8300000, guid: f8c32d7e5e1859041a45dc89c1f60b66, type: 3}
+  - name: hurt
+    clip: {fileID: 8300000, guid: 81f171611d04288478c24c8f9d68a43d, type: 3}
     volume: 5.67
     pitch: 1
     isLooped: 0
@@ -137,6 +137,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: liveWires
     clip: {fileID: 8300000, guid: 0fcda5a119657c84f8a6187a75c8ea4c, type: 3}
+    volume: 5.67
+    pitch: 1
+    isLooped: 0
+    source: {fileID: 0}
+  - name: glassBreak
+    clip: {fileID: 8300000, guid: f2042bdc1c3024e459712f6de5b2c0f4, type: 3}
     volume: 5.67
     pitch: 1
     isLooped: 0
