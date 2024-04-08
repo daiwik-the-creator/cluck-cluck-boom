@@ -73,12 +73,13 @@ public class PressurePlate : MonoBehaviour
 
             if (isReversed)
             {
-                //activateSound.Play();
+                ///activateSound.Play();
+                Debug.Log("trying to enabe wall.");
                 platform.GetComponent<BoxCollider2D>().enabled = true;
                 platform.GetComponent<SpriteRenderer>().enabled = true;
             } else
             
-                //deactivateSound.Play() ;
+                deactivateSound.Play() ;
                 platform.GetComponent<BoxCollider2D>().enabled = false;
                 platform.GetComponent<SpriteRenderer>().enabled = false;
             }
