@@ -10,6 +10,6 @@ public class goldenEggCounter : MonoBehaviour
     public ElevatorLoader myEle;
     void Update()
     {
-        mytxt.text = "FUSES:" + player.getGoldenEggCount() + "/"  + myEle.getRequiredGoldenEggs();
+        mytxt.text = "" + player.getGoldenEggCount() + "/"  + myEle.getRequiredGoldenEggs();
     }
 }
