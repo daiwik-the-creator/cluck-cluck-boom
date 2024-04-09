@@ -67,12 +67,12 @@ public class ScareChicken : MonoBehaviour
         if(!spawned)
             Instantiate(scarechiken,transform.position, Quaternion.identity);
         spawned = true;
-        isInside = false;
-        if (!player.isStealthing)
+        if (!player.isStealthing && isInside)
         {
             player.GetComponent<PlayerStats>().InflictDamage(1);
         }
-        
+        isInside = false;
+
     }
 
 }

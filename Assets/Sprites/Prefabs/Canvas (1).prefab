@@ -223,7 +223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -131, y: 440}
+  m_AnchoredPosition: {x: 792, y: 413}
   m_SizeDelta: {x: 677.591, y: 114.636}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3997071612442108484
@@ -339,6 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mytxt: {fileID: 5123679492659759449}
   player: {fileID: 0}
+  myEle: {fileID: 0}
 --- !u!1 &4923181109066636417
 GameObject:
   m_ObjectHideFlags: 0

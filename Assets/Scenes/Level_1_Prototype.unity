@@ -34970,6 +34970,22 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3552722696313552742, guid: 6ad23c9eed1288740ab045c6cafdf4d1, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552722696313552742, guid: 6ad23c9eed1288740ab045c6cafdf4d1, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3155927
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552722696313552742, guid: 6ad23c9eed1288740ab045c6cafdf4d1, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3155927
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552722696313552742, guid: 6ad23c9eed1288740ab045c6cafdf4d1, type: 3}
+      propertyPath: m_Color.r
+      value: 0.509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552722696313552742, guid: 6ad23c9eed1288740ab045c6cafdf4d1, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -36219,11 +36235,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.2
+      value: -6.7
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1
+      value: -2.25
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -42367,7 +42383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7988944490462775982, guid: e798461cdc2ce4440a5d7ed0134932eb, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8698979206687437854, guid: e798461cdc2ce4440a5d7ed0134932eb, type: 3}
       propertyPath: m_Name
@@ -71230,6 +71246,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1062302604}
+    - target: {fileID: 2198386030927042384, guid: a847e436484bfd64893bd747f82e53da, type: 3}
+      propertyPath: m_text
+      value: ':'
+      objectReference: {fileID: 0}
     - target: {fileID: 6809403538922941704, guid: a847e436484bfd64893bd747f82e53da, type: 3}
       propertyPath: m_Pivot.x
       value: 0
