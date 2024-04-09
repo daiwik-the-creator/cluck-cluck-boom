@@ -20,7 +20,7 @@ public class PlayerStats : MonoBehaviour
     private AudioManager am;
     public bool isElectrocuted = false;
     public Respawn respawn;
-
+    public GameObject GameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +36,9 @@ public class PlayerStats : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            if (SceneManager.GetActiveScene().buildIndex != 3) { 
+                GameOver.SetActive(true);
+             }   
             health = 3;
             Debug.Log("lmaoded");
             respawn.GetComponent<Respawn>().Spawn();

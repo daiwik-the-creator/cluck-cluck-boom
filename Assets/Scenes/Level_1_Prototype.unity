@@ -35887,7 +35887,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 972998588}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1657800446}
+        m_TargetAssemblyTypeName: gameOver, Assembly-CSharp
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &972998588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36205,6 +36217,10 @@ PrefabInstance:
       propertyPath: respawn
       value: 
       objectReference: {fileID: 1450634992}
+    - target: {fileID: 2330195591798394025, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
+      propertyPath: GameOver
+      value: 
+      objectReference: {fileID: 1657800440}
     - target: {fileID: 2330195591798394025, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: goldenEggs
       value: 0
@@ -42270,7 +42286,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1289126238}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1657800446}
+        m_TargetAssemblyTypeName: gameOver, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1289126238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68241,7 +68269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1506154363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68831,6 +68859,7 @@ GameObject:
   - component: {fileID: 1657800444}
   - component: {fileID: 1657800443}
   - component: {fileID: 1657800442}
+  - component: {fileID: 1657800446}
   m_Layer: 5
   m_Name: Game overCanvas
   m_TagString: Untagged
@@ -68924,6 +68953,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1657800446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657800440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2f87c45dd7df941bb9ec2129297097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1665394503
 GameObject:
   m_ObjectHideFlags: 0
@@ -69364,7 +69405,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 8c5eafbc938293940ab7afbd4af5f69a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -71250,6 +71291,14 @@ PrefabInstance:
       propertyPath: m_text
       value: ':'
       objectReference: {fileID: 0}
+    - target: {fileID: 3037240836908895188, guid: a847e436484bfd64893bd747f82e53da, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 364
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037240836908895188, guid: a847e436484bfd64893bd747f82e53da, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 421
+      objectReference: {fileID: 0}
     - target: {fileID: 6809403538922941704, guid: a847e436484bfd64893bd747f82e53da, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -71329,6 +71378,14 @@ PrefabInstance:
     - target: {fileID: 6809403538922941704, guid: a847e436484bfd64893bd747f82e53da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239449918227218903, guid: a847e436484bfd64893bd747f82e53da, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 185
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239449918227218903, guid: a847e436484bfd64893bd747f82e53da, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 372
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
