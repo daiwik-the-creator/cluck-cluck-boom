@@ -25449,6 +25449,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6586296868055182897, guid: 31066e4068b18f844843c71d2b9f9f6c, type: 3}
   m_PrefabInstance: {fileID: 509816016}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &509816020 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5031469023491416838, guid: 31066e4068b18f844843c71d2b9f9f6c, type: 3}
+  m_PrefabInstance: {fileID: 509816016}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9540647f0651ff44ab54078d9ef13e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &524195407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27737,6 +27748,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5304253950187571621, guid: e048678a1d175314186a0f59784bf4eb, type: 3}
+      propertyPath: myEle
+      value: 
+      objectReference: {fileID: 509816020}
+    - target: {fileID: 5304253950187571621, guid: e048678a1d175314186a0f59784bf4eb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 105962299}
     - target: {fileID: 6904090699475068678, guid: e048678a1d175314186a0f59784bf4eb, type: 3}
       propertyPath: playerHealth
       value: 

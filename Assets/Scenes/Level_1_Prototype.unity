@@ -36303,11 +36303,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.2
+      value: -5.9
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1
+      value: -2.3
       objectReference: {fileID: 0}
     - target: {fileID: 6176403856493509050, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -70256,6 +70256,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1920704815 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5031469023491416838, guid: 31066e4068b18f844843c71d2b9f9f6c, type: 3}
+  m_PrefabInstance: {fileID: 7235019671928030226}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200279969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9540647f0651ff44ab54078d9ef13e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1925112086 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 957511442598255585, guid: 15f696b320e0aa946b8635fc65338b2a, type: 3}
@@ -71559,6 +71570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 5304253950187571621, guid: e048678a1d175314186a0f59784bf4eb, type: 3}
+      propertyPath: myEle
+      value: 
+      objectReference: {fileID: 1920704815}
     - target: {fileID: 5304253950187571621, guid: e048678a1d175314186a0f59784bf4eb, type: 3}
       propertyPath: player
       value: 
