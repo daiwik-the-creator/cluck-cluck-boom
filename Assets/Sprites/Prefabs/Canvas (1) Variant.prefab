@@ -27,15 +27,15 @@ RectTransform:
   m_GameObject: {fileID: 858701000409652524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0670487, y: 0.91235155, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6809403538922941704}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -886, y: 276}
-  m_SizeDelta: {x: 501.312, y: 393}
+  m_AnchoredPosition: {x: 622, y: 363}
+  m_SizeDelta: {x: 436.252, y: 411.127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1043314953547037810
 CanvasRenderer:
@@ -58,14 +58,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.6384438, b: 0.025157154, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 441a11ff48ecb12439874f62ddef2243, type: 3}
+  m_Texture: {fileID: 2800000, guid: 1813324bc2699a94782a215d62952236, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -256,14 +256,6 @@ PrefabInstance:
     - target: {fileID: 8340307357462812125, guid: 67cca83b00d28e14fa705f37123a227b, type: 3}
       propertyPath: m_SizeDelta.y
       value: 171.364
-      objectReference: {fileID: 0}
-    - target: {fileID: 8340307357462812125, guid: 67cca83b00d28e14fa705f37123a227b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -685
-      objectReference: {fileID: 0}
-    - target: {fileID: 8340307357462812125, guid: 67cca83b00d28e14fa705f37123a227b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 324.02
       objectReference: {fileID: 0}
     - target: {fileID: 8364282179095474283, guid: 67cca83b00d28e14fa705f37123a227b, type: 3}
       propertyPath: m_IsActive
