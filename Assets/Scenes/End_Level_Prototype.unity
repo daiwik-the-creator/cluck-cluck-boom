@@ -26478,6 +26478,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4183131020616776712, guid: c6849b9d227f8d141b56e7665673814f, type: 3}
   m_PrefabInstance: {fileID: 105962296}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &898227125 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5031469023491416838, guid: 31066e4068b18f844843c71d2b9f9f6c, type: 3}
+  m_PrefabInstance: {fileID: 509816016}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9540647f0651ff44ab54078d9ef13e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &922828048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26573,6 +26584,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas (1) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2140205142250848064, guid: a847e436484bfd64893bd747f82e53da, type: 3}
+      propertyPath: myEle
+      value: 
+      objectReference: {fileID: 898227125}
+    - target: {fileID: 2140205142250848064, guid: a847e436484bfd64893bd747f82e53da, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 105962299}
     - target: {fileID: 2198386030927042384, guid: a847e436484bfd64893bd747f82e53da, type: 3}
       propertyPath: m_text
       value: ':'
