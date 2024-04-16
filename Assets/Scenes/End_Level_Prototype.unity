@@ -25395,6 +25395,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chicken hellivator-1.png
       objectReference: {fileID: 0}
+    - target: {fileID: 5031469023491416838, guid: 31066e4068b18f844843c71d2b9f9f6c, type: 3}
+      propertyPath: isEnd
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031469023491416838, guid: 31066e4068b18f844843c71d2b9f9f6c, type: 3}
+      propertyPath: isSpecial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6586296868055182897, guid: 31066e4068b18f844843c71d2b9f9f6c, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.1454086
